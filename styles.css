@@ -273,6 +273,7 @@ dialog {
 dialog::backdrop { background: rgba(0,0,0,.4); }
 dialog form { padding: 20px; display: grid; gap: 14px; }
 dialog h2 { margin: 0; font-size: 18px; line-height: 1.35; }
+dialog .hint { margin: -6px 0 0; font-size: 13px; color: var(--muted); }
 dialog label { display: grid; gap: 6px; font-size: 14px; }
 dialog label.check { display: flex; align-items: center; gap: 10px; }
 dialog select, dialog input[type=range] { width: 100%; }
