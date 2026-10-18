@@ -214,6 +214,12 @@ body.horizontal .section-title { margin: 4px 0 18px; }
 .verse .en { margin: 4px 0; }
 .verse cite { display: block; font-size: 13px; color: var(--muted); font-style: normal; }
 .virtues ul { padding-left: 18px; margin: 0; }
+.spiritual p { margin: 6px 0; }
+.spiritual ol { padding-left: 22px; margin: 10px 0 0; }
+.spiritual ol > li { margin: 14px 0; }
+.spiritual ol > li::marker { color: var(--accent); font-weight: 700; }
+.spiritual h3 { margin: 0 0 4px; font-size: 16px; color: var(--accent); }
+.spiritual ul { padding-left: 18px; margin: 6px 0; }
 .virtues li { margin: 6px 0; }
 
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }

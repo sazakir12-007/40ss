@@ -81,6 +81,19 @@
     </section>`;
   }
 
+  function spiritualHtml() {
+    const s = data.spiritual_virtues;
+    return `<section class="card extra spiritual">
+      <header class="section-title small"><div class="st-en">${esc(s.title)}</div></header>
+      ${s.intro.map((p) => `<p>${esc(p)}</p>`).join("")}
+      <ol>${s.points.map((pt) => `<li>
+        <h3>${esc(pt.title)}</h3>
+        <p>${esc(pt.text)}</p>
+        ${pt.bullets ? `<ul>${pt.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
+      </li>`).join("")}</ol>
+    </section>`;
+  }
+
   function renderAbout() {
     $("aboutBody").innerHTML = `
       <p>Maulana Ashraf Ali Thanvi originally compiled the 40 Durood and Salaam from Marfu' (directly attributed) Ahadith. He published them in his book titled <em>Zadus Saeed</em> (and also referenced them in <em>Nashrut-Teeb</em>).</p>
@@ -104,10 +117,10 @@
       if (horizontal()) html += itemHtml(it, heading);
       else html += heading + itemHtml(it);
     }
-    main.innerHTML = openingHtml() + html + virtuesHtml();
+    main.innerHTML = openingHtml() + html + virtuesHtml() + spiritualHtml();
   }
 
-  // Index of the page in view when reading sideways: 0 is the opening, 1–40 the items, 41 the virtues.
+  // Index of the page in view when reading sideways: 0 is the opening, 1–40 the items, then the virtues and spiritual virtues.
   // Sideways pages run right-to-left like an Arabic book, so scrollLeft is 0 or negative.
   const pageIndex = () => Math.round(Math.abs(main.scrollLeft) / (main.clientWidth || 1));
   const goToPage = (i, behavior = "auto") => main.scrollTo({ left: -i * main.clientWidth, behavior });
@@ -115,7 +128,7 @@
   function syncPos() {
     if (horizontal()) {
       const page = pageIndex(), n = data.items.length;
-      $("pagePos").textContent = page === 0 ? "Opening" : page > n ? "Virtues" : `${page} / ${n}`;
+      $("pagePos").textContent = page === 0 ? "Opening" : page === n + 1 ? "Virtues" : page > n ? "Spiritual virtues" : `${page} / ${n}`;
     }
     $("toTop").hidden = horizontal() ? pageIndex() === 0 : window.scrollY < window.innerHeight;
   }
@@ -210,7 +223,7 @@
 
   document.addEventListener("keydown", (e) => {
     if (!data || !horizontal() || document.querySelector("dialog[open]")) return;
-    if (e.key === "ArrowLeft") goToPage(Math.min(pageIndex() + 1, data.items.length + 1), "smooth");
+    if (e.key === "ArrowLeft") goToPage(Math.min(pageIndex() + 1, data.items.length + 2), "smooth");
     if (e.key === "ArrowRight") goToPage(Math.max(pageIndex() - 1, 0), "smooth");
   });
   window.addEventListener("resize", () => { if (data && horizontal()) rerender(); });
