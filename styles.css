@@ -87,13 +87,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .icon-btn:active { background: rgba(255,255,255,.15); }
 #backBtn { margin-left: -8px; }
 
-.search-wrap { padding: 10px 16px 0; }
-.search-wrap input {
-  width: 100%; padding: 10px 14px; font-size: 16px;
-  border: 1px solid var(--border); border-radius: 10px;
-  background: var(--surface); color: var(--text);
-}
-
 .tabs { display: flex; gap: 8px; padding: 12px 16px 4px; overflow-x: auto; }
 .tabs button {
   flex: none; border: 1px solid var(--border); background: var(--surface);
@@ -117,9 +110,6 @@ main { max-width: 760px; margin: 0 auto; padding: 8px 16px 96px; }
 }
 .badge { text-transform: capitalize; }
 .badge.pending { color: var(--gold); }
-.meta .spacer { flex: 1; }
-.star { background: none; border: 0; font-size: 22px; line-height: 1; padding: 4px; color: var(--muted); }
-.star.on { color: var(--gold); }
 
 .ar {
   font-family: "Amiri", "Traditional Arabic", serif;

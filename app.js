@@ -6,20 +6,12 @@
   };
 
   const settings = { ...DEFAULTS, ...store.get("settings", {}) };
-  let favs = new Set(store.get("favs", []));
   let filter = "all";
-  let query = "";
   let data = null;
 
   const $ = (id) => document.getElementById(id);
   const main = $("main");
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  // Strip Arabic diacritics and unify alef/ya/ta-marbuta variants so searches match with or without harakat.
-  const norm = (s) => String(s ?? "").toLowerCase()
-    .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, "")
-    .replace(/[\u0622\u0623\u0625\u0671]/g, "\u0627").replace(/\u0649/g, "\u064A").replace(/\u0629/g, "\u0647")
-    .replace(/[\u2019'`]/g, "");
-
   function applySettings() {
     const root = document.documentElement;
     root.dataset.theme = settings.theme;
@@ -29,21 +21,8 @@
     store.set("settings", settings);
   }
 
-  function toggleFav(id) {
-    favs.has(id) ? favs.delete(id) : favs.add(id);
-    store.set("favs", [...favs]);
-    render();
-  }
-
   function visibleItems() {
-    const q = norm(query.trim());
-    return data.items.filter((it) => {
-      if (filter === "fav" && !favs.has(it.id)) return false;
-      if (filter !== "all" && filter !== "fav" && it.type !== filter) return false;
-      if (!q) return true;
-      if (/^\d+$/.test(q)) return String(it.id) === q;
-      return [it.arabic, it.transliteration, it.translation_en, it.source, ...(it.benefits || [])].some((f) => norm(f).includes(q));
-    });
+    return filter === "all" ? data.items : data.items.filter((it) => it.type === filter);
   }
 
   function itemHtml(it, { full, link }) {
@@ -60,8 +39,6 @@
         <span class="num">${it.id}</span>
         <span class="badge">${esc(it.type)}</span>
         ${pending ? `<span class="badge pending" title="Source pending verification">• unverified source</span>` : ""}
-        <span class="spacer"></span>
-        <button class="star${favs.has(it.id) ? " on" : ""}" data-fav="${it.id}" aria-label="Save">${favs.has(it.id) ? "★" : "☆"}</button>
       </div>
       <div class="ar${full ? "" : " clip"}" lang="ar">${esc(it.arabic)}</div>
       ${full && settings.showTr ? `<p class="tr">${esc(it.transliteration)}</p>` : ""}
@@ -90,10 +67,7 @@
   function renderList() {
     const items = visibleItems();
     const full = settings.layout === "full";
-    let html = filter === "all" && !query ? introHtml() : "";
-    if (!items.length) {
-      html += `<p class="empty">${filter === "fav" && !query ? "No saved items yet. Tap ☆ to save one." : "No matches."}</p>`;
-    }
+    let html = filter === "all" ? introHtml() : "";
     let lastType = null;
     for (const it of items) {
       if (filter === "all" && it.type !== lastType) {
@@ -122,8 +96,6 @@
     $("backBtn").hidden = !detail;
     $("tabs").hidden = !!detail;
     $("pager").hidden = !detail;
-    $("searchBtn").hidden = !!detail;
-    $("searchWrap").hidden = !!detail || !$("searchWrap").dataset.open;
     $("title").textContent = detail ? `Durood ${detail}` : "40 Salawat & Salaam";
     const route = location.hash;
     detail ? renderDetail(detail) : renderList();
@@ -138,8 +110,6 @@
 
   // Events
   main.addEventListener("click", (e) => {
-    const fav = e.target.closest("[data-fav]");
-    if (fav) { e.stopPropagation(); toggleFav(Number(fav.dataset.fav)); return; }
     const card = e.target.closest(".card.link");
     if (card) go(Number(card.dataset.id));
   });
@@ -151,15 +121,6 @@
     document.querySelectorAll("#tabs button").forEach((x) => x.classList.toggle("active", x === b));
     render();
   });
-
-  $("searchBtn").onclick = () => {
-    const w = $("searchWrap");
-    if (w.dataset.open) { delete w.dataset.open; query = ""; $("searchInput").value = ""; }
-    else { w.dataset.open = "1"; }
-    render();
-    if (w.dataset.open) $("searchInput").focus();
-  };
-  $("searchInput").addEventListener("input", (e) => { query = e.target.value; renderList(); });
 
   $("backBtn").onclick = () => {
     if (fromList) { fromList = false; history.back(); }
