@@ -13,44 +13,29 @@
 </head>
 <body>
   <header class="bar">
-    <button class="icon-btn" id="backBtn" aria-label="Back" hidden>
-      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
-    </button>
-    <h1 id="title">40 Salawat &amp; Salaam</h1>
-    <button class="icon-btn" id="settingsBtn" aria-label="Settings">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
-    </button>
+    <h1>40 Salawat &amp; Salaam</h1>
+    <div class="menu-wrap">
+      <button class="icon-btn" id="menuBtn" aria-label="Menu" aria-haspopup="menu">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+      </button>
+      <div class="menu" id="menu" role="menu" hidden>
+        <button role="menuitem" id="openSettings">Theme &amp; display</button>
+        <button role="menuitem" id="openAbout">About</button>
+      </div>
+    </div>
   </header>
-
-  <nav class="tabs" id="tabs" role="tablist">
-    <button role="tab" data-filter="all" class="active">All</button>
-    <button role="tab" data-filter="salawat">Salawat</button>
-    <button role="tab" data-filter="salaam">Salaam</button>
-  </nav>
 
   <main id="main"></main>
 
-  <nav class="pager" id="pager" hidden>
-    <button id="prevBtn">‹ Previous</button>
-    <span id="pos"></span>
-    <button id="nextBtn">Next ›</button>
-  </nav>
-
   <dialog id="settings">
     <form method="dialog">
-      <h2>Settings</h2>
+      <h2>Theme &amp; display</h2>
       <label>Theme
         <select id="themeSel">
           <option value="auto">System</option>
           <option value="light">Light</option>
           <option value="sepia">Sepia</option>
           <option value="dark">Dark</option>
-        </select>
-      </label>
-      <label>Layout
-        <select id="layoutSel">
-          <option value="cards">Cards (tap to open)</option>
-          <option value="full">Full text (recite in sequence)</option>
         </select>
       </label>
       <label>Arabic size <span id="sizeVal"></span>
@@ -60,6 +45,14 @@
       <label class="check"><input type="checkbox" id="showEn"> Show translation</label>
       <label class="check"><input type="checkbox" id="showSrc"> Show source &amp; benefits</label>
       <button class="primary">Done</button>
+    </form>
+  </dialog>
+
+  <dialog id="about">
+    <form method="dialog">
+      <h2>About</h2>
+      <div id="aboutBody" class="about-body"></div>
+      <button class="primary">Close</button>
     </form>
   </dialog>
 
