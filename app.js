@@ -23,7 +23,20 @@
     store.set("settings", settings);
   }
 
-  function itemHtml(it) {
+  const SECTIONS = {
+    salawat: { ar: "الصَّلَوَاتُ", en: "Salawat", range: "1 – 25" },
+    salaam: { ar: "السَّلَامُ", en: "Salaam", range: "26 – 40" },
+  };
+  const sectionHtml = (type) => {
+    const s = SECTIONS[type];
+    return `<header class="section-title">
+      <div class="st-ar" lang="ar">${s.ar}</div>
+      <div class="st-en">${s.en}</div>
+      <div class="st-range">${s.range}</div>
+    </header>`;
+  };
+
+  function itemHtml(it, heading = "") {
     const pending = it.source_status === "pending_verification";
     const src = settings.showSrc
       ? `<div class="src">
@@ -33,10 +46,10 @@
         </div>`
       : "";
     return `<article class="card${it.id === current ? " current" : ""}" data-id="${it.id}">
+      ${heading}
       <div class="meta">
         <span class="num">${it.id}</span>
-        <span class="badge">${esc(it.type)}</span>
-        ${pending ? `<span class="badge pending" title="Source pending verification">• unverified source</span>` : ""}
+        ${pending ? `<span class="badge pending" title="Source pending verification">Unverified source</span>` : ""}
       </div>
       <div class="ar" lang="ar">${esc(it.arabic)}</div>
       ${settings.showTr ? `<p class="tr">${esc(it.transliteration)}</p>` : ""}
@@ -60,21 +73,22 @@
       <p class="note">${esc(data.verification_note)}</p>`;
   }
 
+  const horizontal = () => settings.direction === "horizontal";
+
   function render() {
     if (!data) return;
     let html = "";
     let lastType = null;
+    // Section titles sit above cards 1 and 26; when reading sideways they go inside the card's page.
     for (const it of data.items) {
-      if (it.type !== lastType) {
-        html += `<h2 class="section-head">${it.type === "salawat" ? "Salawat (1–25)" : "Salaam (26–40)"}</h2>`;
-        lastType = it.type;
-      }
-      html += itemHtml(it);
+      const heading = it.type !== lastType ? sectionHtml(it.type) : "";
+      lastType = it.type;
+      if (horizontal()) html += itemHtml(it, heading);
+      else html += heading + itemHtml(it);
     }
     main.innerHTML = html;
   }
 
-  const horizontal = () => settings.direction === "horizontal";
   // Index of the page in view when reading sideways.
   const pageIndex = () => Math.round(main.scrollLeft / (main.clientWidth || 1));
   const goToPage = (i, behavior = "auto") => main.scrollTo({ left: i * main.clientWidth, behavior });

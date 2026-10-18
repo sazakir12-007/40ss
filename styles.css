@@ -117,7 +117,6 @@ main { max-width: 760px; margin: 0 auto; padding: 4px 16px 48px; }
   background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px;
 }
 .card.current .num { background: var(--accent); color: var(--on-accent); }
-.badge { text-transform: capitalize; }
 .badge.pending { color: var(--gold); }
 
 .ar {
@@ -133,6 +132,13 @@ main { max-width: 760px; margin: 0 auto; padding: 4px 16px 48px; }
 .note { font-size: 13px; color: var(--gold); margin-top: 6px; }
 
 .section-head { margin: 22px 0 4px; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+.section-title { text-align: center; margin: 28px 0 14px; color: var(--accent); }
+.section-title .st-ar { font-family: "Amiri", "Traditional Arabic", serif; font-size: calc(var(--ar-size) + 18px); font-weight: 700; line-height: 1.6; }
+.section-title .st-en { font-size: 26px; font-weight: 700; letter-spacing: .04em; }
+.section-title .st-range { font-size: 13px; color: var(--muted); letter-spacing: .08em; margin-top: 2px; }
+.section-title::after { content: ""; display: block; width: 72px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }
+body.horizontal .section-title { margin: 4px 0 18px; }
+
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 
 .to-top {
@@ -153,7 +159,6 @@ body.horizontal main {
   scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none;
 }
 body.horizontal main::-webkit-scrollbar { display: none; }
-body.horizontal .section-head { display: none; }
 body.horizontal .card {
   flex: 0 0 100%; scroll-snap-align: start; scroll-snap-stop: always;
   margin: 0; border: 0; border-radius: 0; overflow-y: auto;
