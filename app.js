@@ -91,8 +91,9 @@
   }
 
   // Index of the page in view when reading sideways.
-  const pageIndex = () => Math.round(main.scrollLeft / (main.clientWidth || 1));
-  const goToPage = (i, behavior = "auto") => main.scrollTo({ left: i * main.clientWidth, behavior });
+  // Sideways pages run right-to-left like an Arabic book, so scrollLeft is 0 or negative.
+  const pageIndex = () => Math.round(Math.abs(main.scrollLeft) / (main.clientWidth || 1));
+  const goToPage = (i, behavior = "auto") => main.scrollTo({ left: -i * main.clientWidth, behavior });
 
   function syncPos() {
     if (horizontal()) $("pagePos").textContent = `${pageIndex() + 1} / ${data.items.length}`;
@@ -169,8 +170,8 @@
 
   document.addEventListener("keydown", (e) => {
     if (!data || !horizontal() || document.querySelector("dialog[open]")) return;
-    if (e.key === "ArrowRight") goToPage(Math.min(pageIndex() + 1, data.items.length - 1), "smooth");
-    if (e.key === "ArrowLeft") goToPage(Math.max(pageIndex() - 1, 0), "smooth");
+    if (e.key === "ArrowLeft") goToPage(Math.min(pageIndex() + 1, data.items.length - 1), "smooth");
+    if (e.key === "ArrowRight") goToPage(Math.max(pageIndex() - 1, 0), "smooth");
   });
   window.addEventListener("resize", () => { if (data && horizontal()) rerender(); });
 
