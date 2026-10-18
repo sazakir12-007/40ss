@@ -61,6 +61,7 @@
   function openingHtml() {
     const o = data.opening;
     return `<section class="card extra opening">
+      <h2 class="opening-title">Salutations Upon the Messenger Muhammad <span class="pbuh">Sallallahu Alayhi Wa Sallam</span> from Ahaadeeth</h2>
       <div class="ar" lang="ar">${esc(o.arabic)}</div>
       ${settings.showTr ? `<p class="tr">${esc(o.transliteration)}</p>` : ""}
       ${settings.showEn ? `<p class="en">${esc(o.translation_en)}</p>` : ""}
@@ -73,7 +74,7 @@
       <header class="section-title small"><div class="st-en">Virtues</div></header>
       <blockquote class="verse">
         <div class="ar" lang="ar">${esc(v.arabic)}</div>
-        ${settings.showEn ? `<p class="en">${esc(v.translation_en)}</p>` : ""}
+        <p class="en">${esc(v.translation_en)}</p>
         <cite>${esc(v.reference)}</cite>
       </blockquote>
       <ul>${data.collection_benefits.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>

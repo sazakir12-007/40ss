@@ -51,6 +51,67 @@
   --on-accent: #0e1412;
   color-scheme: dark;
 }
+:root[data-theme="ocean"] {
+  --bg: #eef4f8;
+  --surface: #ffffff;
+  --text: #17242e;
+  --muted: #5a6b78;
+  --accent: #1d5f8a;
+  --accent-soft: #dceaf3;
+  --border: #d6e2ea;
+  --bar: #1d5f8a;
+  --highlight: #e8f2f9;
+}
+:root[data-theme="rose"] {
+  --bg: #faf1f1;
+  --surface: #fffafa;
+  --text: #33201f;
+  --muted: #7c6260;
+  --accent: #9a3b47;
+  --accent-soft: #f3dfe0;
+  --border: #ecd9d9;
+  --bar: #9a3b47;
+  --highlight: #fbe9ea;
+}
+:root[data-theme="lavender"] {
+  --bg: #f4f2fa;
+  --surface: #ffffff;
+  --text: #241f33;
+  --muted: #6a6380;
+  --accent: #5b4a9a;
+  --accent-soft: #e6e1f4;
+  --border: #e0dcee;
+  --bar: #5b4a9a;
+  --highlight: #efebfa;
+}
+:root[data-theme="midnight"] {
+  --bg: #0c1220;
+  --surface: #141c2e;
+  --text: #e4e9f3;
+  --muted: #95a1b8;
+  --accent: #7fa8e8;
+  --accent-soft: #1d2a44;
+  --border: #23304a;
+  --gold: #d9b45a;
+  --bar: #111a2c;
+  --highlight: #18243b;
+  --on-accent: #0c1220;
+  color-scheme: dark;
+}
+:root[data-theme="black"] {
+  --bg: #000000;
+  --surface: #0b0b0b;
+  --text: #ececec;
+  --muted: #9a9a9a;
+  --accent: #5cc3a6;
+  --accent-soft: #14231e;
+  --border: #1f1f1f;
+  --gold: #d9b45a;
+  --bar: #000000;
+  --highlight: #10201b;
+  --on-accent: #000000;
+  color-scheme: dark;
+}
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"] {
     --bg: #0e1412;
@@ -142,6 +203,10 @@ body.horizontal .section-title { margin: 4px 0 18px; }
 .card.extra { cursor: default; }
 .opening { text-align: center; }
 .opening .ar { text-align: center; }
+.opening .ar, .opening .tr, .opening .en { white-space: pre-line; }
+.opening-title { margin: 4px 0 6px; font-size: 22px; line-height: 1.35; color: var(--accent); }
+.opening-title .pbuh { display: block; font-size: 15px; font-weight: 600; color: var(--gold); margin: 2px 0; }
+.opening-title::after { content: ""; display: block; width: 72px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }
 .section-title.small { margin: 4px 0 10px; }
 .section-title.small .st-en { font-size: 22px; }
 .verse { margin: 0 0 12px; padding: 12px 14px; border-radius: 10px; background: var(--accent-soft); text-align: center; }
