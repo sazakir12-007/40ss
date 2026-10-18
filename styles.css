@@ -139,6 +139,18 @@ main { max-width: 760px; margin: 0 auto; padding: 4px 16px 48px; }
 .section-title::after { content: ""; display: block; width: 72px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }
 body.horizontal .section-title { margin: 4px 0 18px; }
 
+.card.extra { cursor: default; }
+.opening { text-align: center; }
+.opening .ar { text-align: center; }
+.section-title.small { margin: 4px 0 10px; }
+.section-title.small .st-en { font-size: 22px; }
+.verse { margin: 0 0 12px; padding: 12px 14px; border-radius: 10px; background: var(--accent-soft); text-align: center; }
+.verse .ar { text-align: center; margin: 0; }
+.verse .en { margin: 4px 0; }
+.verse cite { display: block; font-size: 13px; color: var(--muted); font-style: normal; }
+.virtues ul { padding-left: 18px; margin: 0; }
+.virtues li { margin: 6px 0; }
+
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 
 .to-top {
@@ -183,7 +195,7 @@ dialog {
 }
 dialog::backdrop { background: rgba(0,0,0,.4); }
 dialog form { padding: 20px; display: grid; gap: 14px; }
-dialog h2 { margin: 0; font-size: 18px; }
+dialog h2 { margin: 0; font-size: 18px; line-height: 1.35; }
 dialog label { display: grid; gap: 6px; font-size: 14px; }
 dialog label.check { display: flex; align-items: center; gap: 10px; }
 dialog select, dialog input[type=range] { width: 100%; }

@@ -1,5 +1,5 @@
 // Bump VERSION whenever any cached file changes.
-const VERSION = "40ss-v8";
+const VERSION = "40ss-v9";
 const ASSETS = [
   "./",
   "index.html",

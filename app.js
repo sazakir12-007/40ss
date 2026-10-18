@@ -58,18 +58,34 @@
     </article>`;
   }
 
-  function renderAbout() {
+  function openingHtml() {
     const o = data.opening;
-    $("aboutBody").innerHTML = `
-      <p><strong>${esc(data.title)}</strong></p>
-      <p>${esc(data.compiler)}.</p>
-      <p>${esc(data.structure)}.</p>
-      <h3 class="section-head">Opening</h3>
+    return `<section class="card extra opening">
       <div class="ar" lang="ar">${esc(o.arabic)}</div>
-      <p class="tr">${esc(o.transliteration)}</p>
-      <p class="en">${esc(o.translation_en)}</p>
-      <h3 class="section-head">Virtues of the collection</h3>
+      ${settings.showTr ? `<p class="tr">${esc(o.transliteration)}</p>` : ""}
+      ${settings.showEn ? `<p class="en">${esc(o.translation_en)}</p>` : ""}
+    </section>`;
+  }
+
+  function virtuesHtml() {
+    const v = data.virtues_verse;
+    return `<section class="card extra virtues">
+      <header class="section-title small"><div class="st-en">Virtues</div></header>
+      <blockquote class="verse">
+        <div class="ar" lang="ar">${esc(v.arabic)}</div>
+        ${settings.showEn ? `<p class="en">${esc(v.translation_en)}</p>` : ""}
+        <cite>${esc(v.reference)}</cite>
+      </blockquote>
       <ul>${data.collection_benefits.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
+    </section>`;
+  }
+
+  function renderAbout() {
+    $("aboutBody").innerHTML = `
+      <p><strong>Chahal Durood</strong> is a collection of forty salutations upon the Prophet ﷺ, each taken from a marfu' hadith.</p>
+      <p>It was compiled by Hakim al-Ummah Maulana Ashraf Ali Thanwi (rahimahullah) in <em>Zad-us-Sa'eed</em>, and later reproduced by Shaykh al-Hadith Maulana Muhammad Zakariyya Kandhlawi (rahimahullah) in <em>Fazail-e-Durood</em>.</p>
+      <p>The collection opens with a short invocation, followed by 25 salawat (1–25) and 15 salaam (26–40), and closes with the virtues of reciting them.</p>
+      <p>Tap any durood to mark it while you recite; the app remembers your place. Theme, text size and reading direction can be changed from the menu.</p>
       <h3 class="section-head">Note</h3>
       <p>Utmost care has been taken in compiling the text, transliteration and translation in this app. Should you find anything incorrect or not in order, kindly inform the developer so it can be corrected, in sha Allah. May Allah accept it from all of us.</p>`;
   }
@@ -87,16 +103,19 @@
       if (horizontal()) html += itemHtml(it, heading);
       else html += heading + itemHtml(it);
     }
-    main.innerHTML = html;
+    main.innerHTML = openingHtml() + html + virtuesHtml();
   }
 
-  // Index of the page in view when reading sideways.
+  // Index of the page in view when reading sideways: 0 is the opening, 1–40 the items, 41 the virtues.
   // Sideways pages run right-to-left like an Arabic book, so scrollLeft is 0 or negative.
   const pageIndex = () => Math.round(Math.abs(main.scrollLeft) / (main.clientWidth || 1));
   const goToPage = (i, behavior = "auto") => main.scrollTo({ left: -i * main.clientWidth, behavior });
 
   function syncPos() {
-    if (horizontal()) $("pagePos").textContent = `${pageIndex() + 1} / ${data.items.length}`;
+    if (horizontal()) {
+      const page = pageIndex(), n = data.items.length;
+      $("pagePos").textContent = page === 0 ? "Opening" : page > n ? "Virtues" : `${page} / ${n}`;
+    }
     $("toTop").hidden = horizontal() ? pageIndex() === 0 : window.scrollY < window.innerHeight;
   }
 
@@ -110,7 +129,7 @@
 
   function showCurrent() {
     const i = data.items.findIndex((it) => it.id === current);
-    if (horizontal()) goToPage(Math.max(i, 0));
+    if (horizontal()) goToPage(i + 1);
     else main.querySelector(".card.current")?.scrollIntoView({ block: "center" });
     syncPos();
   }
@@ -170,7 +189,7 @@
 
   document.addEventListener("keydown", (e) => {
     if (!data || !horizontal() || document.querySelector("dialog[open]")) return;
-    if (e.key === "ArrowLeft") goToPage(Math.min(pageIndex() + 1, data.items.length - 1), "smooth");
+    if (e.key === "ArrowLeft") goToPage(Math.min(pageIndex() + 1, data.items.length + 1), "smooth");
     if (e.key === "ArrowRight") goToPage(Math.max(pageIndex() - 1, 0), "smooth");
   });
   window.addEventListener("resize", () => { if (data && horizontal()) rerender(); });
