@@ -82,9 +82,9 @@
 
   function renderAbout() {
     $("aboutBody").innerHTML = `
-      <p><strong>Chahal Durood</strong> is a collection of forty salutations upon the Prophet ﷺ, each taken from a marfu' hadith.</p>
-      <p>It was compiled by Hakim al-Ummah Maulana Ashraf Ali Thanwi (rahimahullah) in <em>Zad-us-Sa'eed</em>, and later reproduced by Shaykh al-Hadith Maulana Muhammad Zakariyya Kandhlawi (rahimahullah) in <em>Fazail-e-Durood</em>.</p>
-      <p>The collection opens with a short invocation, followed by 25 salawat (1–25) and 15 salaam (26–40), and closes with the virtues of reciting them.</p>
+      <p>Maulana Ashraf Ali Thanvi originally compiled the 40 Durood and Salaam from Marfu' (directly attributed) Ahadith. He published them in his book titled <em>Zadus Saeed</em> (and also referenced them in <em>Nashrut-Teeb</em>).</p>
+      <p>Shaykh al-Hadith Maulana Muhammad Zakariyya Kandhlawi famously popularized and re-narrated this exact compilation. He included it at the end of his widely read book <em>Faza'il-e-Durood Shareef</em> (Virtues of Durood) to share the blessings of the compilation with a wider audience.</p>
+      <p>The collection consists of 25 forms of Durood (salutations of peace) and 15 forms of Salam (greetings of peace) extracted directly from prophetic traditions.</p>
       <p>Tap any durood to mark it while you recite; the app remembers your place. Theme, text size and reading direction can be changed from the menu.</p>
       <h3 class="section-head">Note</h3>
       <p>Utmost care has been taken in compiling the text, transliteration and translation in this app. Should you find anything incorrect or not in order, kindly inform the developer so it can be corrected, in sha Allah. May Allah accept it from all of us.</p>`;
