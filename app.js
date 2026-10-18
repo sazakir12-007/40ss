@@ -118,6 +118,12 @@
 
   for (const d of [dlg, about]) d.addEventListener("click", (e) => { if (e.target === d) d.close(); });
 
+  // Scroll-to-top button, shown once the reader is past the first screen.
+  const toTop = $("toTop");
+  const syncToTop = () => { toTop.hidden = window.scrollY < window.innerHeight; };
+  window.addEventListener("scroll", syncToTop, { passive: true });
+  toTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", applySettings);
 
   applySettings();
@@ -128,6 +134,7 @@
       render();
       renderAbout();
       main.querySelector(".card.current")?.scrollIntoView({ block: "center" });
+      syncToTop();
     })
     .catch(() => { main.innerHTML = `<p class="empty">Could not load data.</p>`; });
 

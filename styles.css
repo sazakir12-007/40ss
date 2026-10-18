@@ -135,6 +135,14 @@ main { max-width: 760px; margin: 0 auto; padding: 4px 16px 48px; }
 .section-head { margin: 22px 0 4px; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 
+.to-top {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 5;
+  width: 48px; height: 48px; border-radius: 50%; border: 0;
+  background: var(--accent); color: var(--on-accent);
+  display: grid; place-items: center; box-shadow: 0 4px 14px rgba(0,0,0,.25);
+}
+.to-top svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
 .about-body { max-height: 65vh; overflow-y: auto; font-size: 14px; }
 .about-body p { margin: 6px 0; }
 .about-body ul { padding-left: 18px; }
