@@ -1,0 +1,463 @@
+{
+  "title": "Chahal Durood – 40 Salawat & Salaam",
+  "compiler": "Hakim al-Ummah Maulana Ashraf Ali Thanwi (Zad-us-Sa'eed); reproduced by Shaykh al-Hadith Maulana Muhammad Zakariyya Kandhlawi in Fazail-e-Durood",
+  "structure": "25 salawat (1–25) followed by 15 salaam (26–40); all from marfu' ahadith per the compiler",
+  "opening": {
+    "arabic": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ، سَلَامٌ عَلَى عِبَادِهِ الَّذِينَ اصْطَفَى، سَلَامٌ عَلَى الْمُرْسَلِينَ",
+    "transliteration": "Bismillahir Rahmanir Rahim. Salamun 'ala 'ibadihil ladhinastafa, salamun 'alal mursalin.",
+    "translation_en": "In the name of Allah, the Most Gracious, the Most Merciful. Peace be upon His servants whom He has chosen (Qur'an 27:59); peace be upon the messengers (Qur'an 37:181)."
+  },
+  "collection_benefits": [
+    "Whoever recites these daily receives all the blessings promised for each durood in the ahadith (compiler's note).",
+    "As a collection of forty ahadith, it is hoped to fall under the glad tiding: whoever conveys forty ahadith on a matter of religion to the Ummah will be raised among the learned and receive the Prophet's ﷺ intercession."
+  ],
+  "verification_note": "Arabic must be proofread by a qualified 'alim against a printed Fazail-e-Durood / Zad-us-Sa'eed before release. Items with source_status 'pending_verification' need their hadith reference filled from the printed book.",
+  "items": [
+    {
+      "id": 1,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ وَأَنْزِلْهُ الْمَقْعَدَ الْمُقَرَّبَ عِنْدَكَ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin wa anzilhul maq'adal muqarraba 'indak.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and upon the family of Muhammad, and grant him the station of proximity with You.",
+      "source": "Narrated by Ruwayfi' bin Thabit (RA) – Bazzar and Tabarani, as quoted in Targheeb wat Tarheeb",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [
+        "The Prophet ﷺ said his intercession becomes compulsory (wajib) for the one who recites it."
+      ],
+      "note": null
+    },
+    {
+      "id": 2,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ الْقَائِمَةِ وَالصَّلَاةِ النَّافِعَةِ صَلِّ عَلَى مُحَمَّدٍ وَارْضَ عَنِّي رِضًا لَا سَخَطَ بَعْدَهُ أَبَدًا",
+      "transliteration": "Allahumma rabba hadhihid da'watil qa'imati was salatin nafi'ati, salli 'ala Muhammadin wardha 'anni ridhal la sakhata ba'dahu abada.",
+      "translation_en": "O Allah, Lord of this lasting call and this beneficial prayer, confer blessings upon Muhammad and be pleased with me so that You are never displeased with me thereafter.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 3,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ وَصَلِّ عَلَى الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِينَ وَالْمُسْلِمَاتِ",
+      "transliteration": "Allahumma salli 'ala Muhammadin 'abdika wa rasulika wa salli 'alal mu'minina wal mu'minati wal muslimina wal muslimat.",
+      "translation_en": "O Allah, confer blessings upon Muhammad, Your servant and Your messenger, and confer blessings upon the believing men and women and the Muslim men and women.",
+      "source": "Narrated by Abu Sa'eed al-Khudri (RA) – Ibn Hibban, as quoted in Targheeb wat Tarheeb",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [
+        "For a Muslim who has nothing to give in charity, reciting it in his du'a is counted as Zakah (Sadaqah) for him."
+      ],
+      "note": null
+    },
+    {
+      "id": 4,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ وَارْحَمْ مُحَمَّدًا وَآلَ مُحَمَّدٍ كَمَا صَلَّيْتَ وَبَارَكْتَ وَرَحِمْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin wa barik 'ala Muhammadin wa 'ala ali Muhammadin warham Muhammadan wa ala Muhammadin kama sallayta wa barakta wa rahimta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad, bless Muhammad and the family of Muhammad, and have mercy on Muhammad and the family of Muhammad, as You conferred blessings, blessed and showed mercy to Ibrahim and the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 5,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala ali Ibrahima innaka Hamidum Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious. O Allah, bless Muhammad and the family of Muhammad as You blessed the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 6,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala ali Ibrahima innaka Hamidum Majid, wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious. And bless Muhammad and the family of Muhammad as You blessed the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 7,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima innaka Hamidum Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim. Verily, You are the Praiseworthy, the Glorious. O Allah, bless Muhammad and the family of Muhammad as You blessed Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 8,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid, wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim and the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious. And bless Muhammad and the family of Muhammad as You blessed Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 9,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim, and bless Muhammad and the family of Muhammad as You blessed Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 10,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima innaka Hamidum Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim. Verily, You are the Praiseworthy, the Glorious. O Allah, bless Muhammad and the family of Muhammad as You blessed the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": "Source transliteration omits 'wa 'ala ali Muhammad' in the first sentence; the source translation and Arabic include it. Confirm against the printed book."
+    },
+    {
+      "id": 11,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ فِي الْعَالَمِينَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala ali Ibrahima wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala ali Ibrahima fil 'alamina innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon the family of Ibrahim, and bless Muhammad and the family of Muhammad as You blessed the family of Ibrahim in all the worlds. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 12,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa azwajihi wa dhurriyyatihi kama sallayta 'ala ali Ibrahima wa barik 'ala Muhammadin wa azwajihi wa dhurriyyatihi kama barakta 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad, his wives and his offspring as You conferred blessings upon the family of Ibrahim, and bless Muhammad, his wives and his offspring as You blessed the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 13,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala azwajihi wa dhurriyyatihi kama sallayta 'ala ali Ibrahima wa barik 'ala Muhammadin wa 'ala azwajihi wa dhurriyyatihi kama barakta 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and upon his wives and his offspring as You conferred blessings upon the family of Ibrahim, and bless Muhammad, his wives and his offspring as You blessed the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 14,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ النَّبِيِّ وَأَزْوَاجِهِ أُمَّهَاتِ الْمُؤْمِنِينَ وَذُرِّيَّتِهِ وَأَهْلِ بَيْتِهِ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadinin Nabiyyi wa azwajihi ummahatil mu'minina wa dhurriyyatihi wa ahli baytihi kama sallayta 'ala Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon the Prophet Muhammad, his wives who are the Mothers of the Believers, his offspring and the people of his household, as You conferred blessings upon Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": "Narrated by Abu Hurayrah (RA) – Abu Dawood",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [
+        "Whoever wishes that his durood upon the Prophet's household be measured with the largest measure should recite this."
+      ],
+      "note": "Fazail-e-Durood's version of this hadith reads 'ala ali Ibrahim (family of Ibrahim); the 40 list reads 'ala Ibrahim. Confirm which wording your printed edition uses."
+    },
+    {
+      "id": 15,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَتَرَحَّمْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا تَرَحَّمْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima, wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima, wa tarahham 'ala Muhammadin wa 'ala ali Muhammadin kama tarahhamta 'ala Ibrahima wa 'ala ali Ibrahim.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim and the family of Ibrahim; bless Muhammad and the family of Muhammad as You blessed Ibrahim; and shower Your mercy upon Muhammad and the family of Muhammad as You showered mercy upon Ibrahim and the family of Ibrahim.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 16,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ تَرَحَّمْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا تَرَحَّمْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ تَحَنَّنْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا تَحَنَّنْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ سَلِّمْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا سَلَّمْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid. Allahumma tarahham 'ala Muhammadin wa 'ala ali Muhammadin kama tarahhamta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid. Allahumma tahannan 'ala Muhammadin wa 'ala ali Muhammadin kama tahannanta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid. Allahumma sallim 'ala Muhammadin wa 'ala ali Muhammadin kama sallamta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim and the family of Ibrahim. O Allah, bless Muhammad and the family of Muhammad as You blessed Ibrahim and the family of Ibrahim. O Allah, shower Your mercy upon Muhammad and the family of Muhammad as You showered mercy upon Ibrahim and the family of Ibrahim. O Allah, shower Your compassion upon Muhammad and the family of Muhammad as You showered compassion upon Ibrahim and the family of Ibrahim. O Allah, bestow peace upon Muhammad and the family of Muhammad as You bestowed peace upon Ibrahim and the family of Ibrahim. (Each sentence ends: Verily, You are the Praiseworthy, the Glorious.)",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 17,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ وَبَارِكْ وَسَلِّمْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ وَارْحَمْ مُحَمَّدًا وَآلَ مُحَمَّدٍ كَمَا صَلَّيْتَ وَبَارَكْتَ وَتَرَحَّمْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ فِي الْعَالَمِينَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin wa barik wa sallim 'ala Muhammadin wa 'ala ali Muhammadin warham Muhammadan wa ala Muhammadin kama sallayta wa barakta wa tarahhamta 'ala Ibrahima wa 'ala ali Ibrahima fil 'alamina innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad; bless and bestow peace upon Muhammad and the family of Muhammad; and have mercy on Muhammad and the family of Muhammad, as You conferred blessings, blessed and showered mercy upon Ibrahim and the family of Ibrahim in all the worlds. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 18,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim and the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious. O Allah, bless Muhammad and the family of Muhammad as You blessed Ibrahim and the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 19,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin 'abdika wa rasulika kama sallayta 'ala ali Ibrahima wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon Muhammad, Your servant and Your messenger, as You conferred blessings upon the family of Ibrahim, and bless Muhammad and the family of Muhammad as You blessed the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 20,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadinin Nabiyyil Ummiyyi wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa barik 'ala Muhammadinin Nabiyyil Ummiyyi kama barakta 'ala Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon the unlettered Prophet Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim, and bless the unlettered Prophet Muhammad as You blessed Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 21,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِ مُحَمَّدٍ، اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ صَلَاةً تَكُونُ لَكَ رِضًى وَلَهُ جَزَاءً وَلِحَقِّهِ أَدَاءً، وَأَعْطِهِ الْوَسِيلَةَ وَالْفَضِيلَةَ وَالْمَقَامَ الْمَحْمُودَ الَّذِي وَعَدْتَهُ، وَاجْزِهِ عَنَّا مَا هُوَ أَهْلُهُ، وَاجْزِهِ أَفْضَلَ مَا جَازَيْتَ نَبِيًّا عَنْ قَوْمِهِ وَرَسُولًا عَنْ أُمَّتِهِ، وَصَلِّ عَلَى جَمِيعِ إِخْوَانِهِ مِنَ النَّبِيِّينَ وَالصَّالِحِينَ، يَا أَرْحَمَ الرَّاحِمِينَ",
+      "transliteration": "Allahumma salli 'ala Muhammadin 'abdika wa rasulikan Nabiyyil Ummiyyi wa 'ala ali Muhammad. Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin salatan takunu laka ridhan wa lahu jaza'an wa li haqqihi ada'an, wa a'tihil wasilata wal fadhilata wal maqamal mahmudal ladhi wa'adtahu, wajzihi 'anna ma huwa ahluhu, wajzihi afdhala ma jazayta nabiyyan 'an qawmihi wa rasulan 'an ummatihi, wa salli 'ala jami'i ikhwanihi minan nabiyyina was salihina, ya arhamar rahimin.",
+      "translation_en": "O Allah, confer blessings upon Muhammad, Your servant and Your messenger, the unlettered Prophet, and upon the family of Muhammad. O Allah, confer blessings upon Muhammad and the family of Muhammad – blessings which please You, which are a reward for him and which fulfil his rights. Grant him al-Wasilah, al-Fadhilah and al-Maqam al-Mahmud which You have promised him. Reward him on our behalf as he deserves, and with the best You have ever rewarded a prophet on behalf of his people and a messenger on behalf of his nation. And confer blessings upon all his brothers among the prophets and the righteous, O Most Merciful of those who show mercy.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 22,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، وَبَارِكْ عَلَى مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadinin Nabiyyil Ummiyyi wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima, wa barik 'ala Muhammadinin Nabiyyil Ummiyyi wa 'ala ali Muhammadin kama barakta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, confer blessings upon the unlettered Prophet Muhammad and the family of Muhammad as You conferred blessings upon Ibrahim and the family of Ibrahim, and bless the unlettered Prophet Muhammad and the family of Muhammad as You blessed Ibrahim and the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 23,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى أَهْلِ بَيْتِهِ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ صَلِّ عَلَيْنَا مَعَهُمْ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى أَهْلِ بَيْتِهِ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَيْنَا مَعَهُمْ، صَلَوَاتُ اللَّهِ وَصَلَوَاتُ الْمُؤْمِنِينَ عَلَى مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ahli baytihi kama sallayta 'ala Ibrahima innaka Hamidum Majid. Allahumma salli 'alayna ma'ahum. Allahumma barik 'ala Muhammadin wa 'ala ahli baytihi kama barakta 'ala Ibrahima innaka Hamidum Majid. Allahumma barik 'alayna ma'ahum. Salawatullahi wa salawatul mu'minina 'ala Muhammadinin Nabiyyil Ummiyy.",
+      "translation_en": "O Allah, confer blessings upon Muhammad and the people of his household as You conferred blessings upon Ibrahim. Verily, You are the Praiseworthy, the Glorious. O Allah, confer blessings upon us together with them. O Allah, bless Muhammad and the people of his household as You blessed Ibrahim. Verily, You are the Praiseworthy, the Glorious. O Allah, bless us together with them. May the blessings of Allah and the blessings of the believers be upon the unlettered Prophet Muhammad.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 24,
+      "type": "salawat",
+      "arabic": "اللَّهُمَّ اجْعَلْ صَلَوَاتِكَ وَرَحْمَتَكَ وَبَرَكَاتِكَ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا جَعَلْتَهَا عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahummaj'al salawatika wa rahmataka wa barakatika 'ala Muhammadin wa 'ala ali Muhammadin kama ja'altaha 'ala ali Ibrahima innaka Hamidum Majid, wa barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidum Majid.",
+      "translation_en": "O Allah, bestow Your blessings, mercy and abundance upon Muhammad and the family of Muhammad as You bestowed them upon the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious. And bless Muhammad and the family of Muhammad as You blessed Ibrahim and the family of Ibrahim. Verily, You are the Praiseworthy, the Glorious.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 25,
+      "type": "salawat",
+      "arabic": "وَصَلَّى اللَّهُ عَلَى النَّبِيِّ الْأُمِّيِّ",
+      "transliteration": "Wa sallallahu 'alan Nabiyyil Ummiyy.",
+      "translation_en": "May Allah confer blessings upon the unlettered Prophet.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 26,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatu lillahi was-salawatu wat-tayyibatu, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation_en": "All verbal worship, all bodily worship and all monetary devotions are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is His servant and His messenger.",
+      "source": "Narrated by 'Abdullah bin Mas'ud (RA) – Bukhari and Muslim (Tashahhud)",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 27,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الطَّيِّبَاتُ الصَّلَوَاتُ لِلَّهِ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatut tayyibatus salawatu lillah, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation_en": "All verbal worship, all monetary devotions and all bodily worship are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is His servant and His messenger.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 28,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ لِلَّهِ الطَّيِّبَاتُ الصَّلَوَاتُ لِلَّهِ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatu lillahit tayyibatus salawatu lillah, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wahdahu la sharika lahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation_en": "All verbal worship is for Allah, and all monetary devotions and bodily worship are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, alone without partner, and I bear witness that Muhammad is His servant and His messenger.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 29,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ، سَلَامٌ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، سَلَامٌ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatul mubarakatus salawatut tayyibatu lillah, salamun 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, salamun 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation_en": "All verbal worship, most blessed, all bodily worship and all monetary devotions are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is His servant and His messenger.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 30,
+      "type": "salaam",
+      "arabic": "بِسْمِ اللَّهِ وَبِاللَّهِ، التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، أَسْأَلُ اللَّهَ الْجَنَّةَ وَأَعُوذُ بِاللَّهِ مِنَ النَّارِ",
+      "transliteration": "Bismillahi wa billah, at-tahiyyatu lillahi was-salawatu wat-tayyibatu, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh, as'alullahal jannata wa a'udhu billahi minan nar.",
+      "translation_en": "I begin with Allah's name and with Allah. All verbal worship, all bodily worship and all monetary devotions are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is His servant and His messenger. I ask Allah for Paradise and seek His refuge from the Fire.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 31,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ لِلَّهِ، الزَّاكِيَاتُ لِلَّهِ، الطَّيِّبَاتُ الصَّلَوَاتُ لِلَّهِ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatu lillah, az-zakiyatu lillah, at-tayyibatus salawatu lillah, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation_en": "All verbal worship is for Allah, all pure actions are for Allah, all bodily worship and monetary devotions are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is His servant and His messenger.",
+      "source": "Tashahhud taught by 'Umar bin al-Khattab (RA) – Muwatta Imam Malik",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 32,
+      "type": "salaam",
+      "arabic": "بِسْمِ اللَّهِ وَبِاللَّهِ خَيْرِ الْأَسْمَاءِ، التَّحِيَّاتُ الطَّيِّبَاتُ الصَّلَوَاتُ لِلَّهِ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، أَرْسَلَهُ بِالْحَقِّ بَشِيرًا وَنَذِيرًا، وَأَنَّ السَّاعَةَ آتِيَةٌ لَا رَيْبَ فِيهَا، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، اللَّهُمَّ اغْفِرْ لِي وَاهْدِنِي",
+      "transliteration": "Bismillahi wa billahi khayril asma', at-tahiyyatut tayyibatus salawatu lillah, ashhadu alla ilaha illallahu wahdahu la sharika lahu wa ashhadu anna Muhammadan 'abduhu wa rasuluhu, arsalahu bil haqqi bashiran wa nadhira, wa annas sa'ata atiyatul la rayba fiha, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, Allahummaghfir li wahdini.",
+      "translation_en": "I begin with the name of Allah and with Allah, the best of all names. All verbal worship, monetary devotions and bodily worship are for Allah. I bear witness that there is none worthy of worship besides Allah, alone without partner, and I bear witness that Muhammad is His servant and His messenger; He sent him with the truth as a bearer of glad tidings and a warner, and (I bear witness) that the Hour is coming without doubt. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. O Allah, forgive me and guide me.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 33,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الطَّيِّبَاتُ وَالصَّلَوَاتُ وَالْمُلْكُ لِلَّهِ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ",
+      "transliteration": "At-tahiyyatut tayyibatu was-salawatu wal mulku lillah, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuh.",
+      "translation_en": "All verbal worship, all monetary devotions, all bodily worship and total dominion belong to Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 34,
+      "type": "salaam",
+      "arabic": "بِسْمِ اللَّهِ، التَّحِيَّاتُ لِلَّهِ، الصَّلَوَاتُ لِلَّهِ، الزَّاكِيَاتُ لِلَّهِ، السَّلَامُ عَلَى النَّبِيِّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، شَهِدْتُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، شَهِدْتُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ",
+      "transliteration": "Bismillah, at-tahiyyatu lillah, as-salawatu lillah, az-zakiyatu lillah, as-salamu 'alan Nabiyyi wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, shahidtu alla ilaha illallah, shahidtu anna Muhammadar rasulullah.",
+      "translation_en": "I begin in the name of Allah. All verbal worship is for Allah, all bodily worship is for Allah, all pure actions are for Allah. Peace be upon the Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I have borne witness that there is none worthy of worship besides Allah; I have borne witness that Muhammad is the Messenger of Allah.",
+      "source": "Tashahhud of 'Abdullah bin 'Umar (RA) – Muwatta Imam Malik",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 35,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الطَّيِّبَاتُ الصَّلَوَاتُ الزَّاكِيَاتُ لِلَّهِ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ",
+      "transliteration": "At-tahiyyatut tayyibatus salawatuz zakiyatu lillah, ashhadu alla ilaha illallahu wahdahu la sharika lahu wa anna Muhammadan 'abduhu wa rasuluhu, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin.",
+      "translation_en": "All verbal worship, monetary devotions, bodily worship and pure actions are for Allah. I bear witness that there is none worthy of worship besides Allah, alone without partner, and that Muhammad is His servant and His messenger. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 36,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الطَّيِّبَاتُ الصَّلَوَاتُ الزَّاكِيَاتُ لِلَّهِ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُ اللَّهِ وَرَسُولُهُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ",
+      "transliteration": "At-tahiyyatut tayyibatus salawatuz zakiyatu lillah, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abdullahi wa rasuluhu, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin.",
+      "translation_en": "All verbal worship, monetary devotions, bodily worship and pure actions are for Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is the servant of Allah and His messenger. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 37,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الصَّلَوَاتُ لِلَّهِ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ",
+      "transliteration": "At-tahiyyatus salawatu lillah, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin.",
+      "translation_en": "All verbal worship and all bodily worship are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 38,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ لِلَّهِ الصَّلَوَاتُ الطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatu lillahis salawatut tayyibatu, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullah, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation_en": "All verbal worship is for Allah, and all bodily worship and monetary devotions. Peace be upon you, O Prophet, and the mercy of Allah. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is His servant and His messenger.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 39,
+      "type": "salaam",
+      "arabic": "التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ",
+      "transliteration": "At-tahiyyatul mubarakatus salawatut tayyibatu lillah, as-salamu 'alayka ayyuhan Nabiyyu wa rahmatullahi wa barakatuhu, as-salamu 'alayna wa 'ala 'ibadillahis salihin, ashhadu alla ilaha illallahu wa ashhadu anna Muhammadar rasulullah.",
+      "translation_en": "All verbal worship, most blessed, all bodily worship and all monetary devotions are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is none worthy of worship besides Allah, and I bear witness that Muhammad is the Messenger of Allah.",
+      "source": "Tashahhud of 'Abdullah bin 'Abbas (RA) – Muslim",
+      "source_status": "cited_in_fazail_e_durood",
+      "benefits": [],
+      "note": null
+    },
+    {
+      "id": 40,
+      "type": "salaam",
+      "arabic": "بِسْمِ اللَّهِ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ",
+      "transliteration": "Bismillahi was-salamu 'ala rasulillah.",
+      "translation_en": "I begin in the name of Allah, and peace be upon the Messenger of Allah.",
+      "source": null,
+      "source_status": "pending_verification",
+      "benefits": [],
+      "note": null
+    }
+  ]
+}

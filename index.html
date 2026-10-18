@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cut">
+  <meta name="theme-color" content="#0f5c4d">
+  <meta name="description" content="Chahal Durood – 40 Salawat & Salaam to recite daily, offline.">
+  <title>40 Salawat &amp; Salaam</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <button class="icon-btn" id="backBtn" aria-label="Back" hidden>
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <h1 id="title">40 Salawat &amp; Salaam</h1>
+    <button class="icon-btn" id="searchBtn" aria-label="Search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>
+    </button>
+    <button class="icon-btn" id="settingsBtn" aria-label="Settings">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+    </button>
+  </header>
+
+  <div class="search-wrap" id="searchWrap" hidden>
+    <input type="search" id="searchInput" placeholder="Search text or number…" autocomplete="off">
+  </div>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button role="tab" data-filter="all" class="active">All</button>
+    <button role="tab" data-filter="salawat">Salawat</button>
+    <button role="tab" data-filter="salaam">Salaam</button>
+    <button role="tab" data-filter="fav">★ Saved</button>
+  </nav>
+
+  <main id="main"></main>
+
+  <nav class="pager" id="pager" hidden>
+    <button id="prevBtn">‹ Previous</button>
+    <span id="pos"></span>
+    <button id="nextBtn">Next ›</button>
+  </nav>
+
+  <dialog id="settings">
+    <form method="dialog">
+      <h2>Settings</h2>
+      <label>Theme
+        <select id="themeSel">
+          <option value="auto">System</option>
+          <option value="light">Light</option>
+          <option value="sepia">Sepia</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+      <label>Layout
+        <select id="layoutSel">
+          <option value="cards">Cards (tap to open)</option>
+          <option value="full">Full text (recite in sequence)</option>
+        </select>
+      </label>
+      <label>Arabic size <span id="sizeVal"></span>
+        <input type="range" id="sizeRange" min="20" max="48" step="2">
+      </label>
+      <label class="check"><input type="checkbox" id="showTr"> Show transliteration</label>
+      <label class="check"><input type="checkbox" id="showEn"> Show translation</label>
+      <label class="check"><input type="checkbox" id="showSrc"> Show source &amp; benefits</label>
+      <button class="primary">Done</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
