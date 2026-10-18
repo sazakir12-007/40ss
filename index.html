@@ -27,6 +27,8 @@
 
   <main id="main"></main>
 
+  <div class="page-pos" id="pagePos"></div>
+
   <button class="to-top" id="toTop" aria-label="Scroll to top" hidden>
     <svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
   </button>
@@ -40,6 +42,12 @@
           <option value="light">Light</option>
           <option value="sepia">Sepia</option>
           <option value="dark">Dark</option>
+        </select>
+      </label>
+      <label>Reading
+        <select id="dirSel">
+          <option value="vertical">Vertical (scroll down)</option>
+          <option value="horizontal">Sideways (swipe left / right)</option>
         </select>
       </label>
       <label>Arabic size <span id="sizeVal"></span>

@@ -1,5 +1,5 @@
 (() => {
-  const DEFAULTS = { theme: "auto", size: 30, showTr: true, showEn: true, showSrc: true };
+  const DEFAULTS = { theme: "auto", direction: "vertical", size: 30, showTr: true, showEn: true, showSrc: true };
   const store = {
     get(k, d) { try { const v = localStorage.getItem("40ss:" + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
     set(k, v) { try { localStorage.setItem("40ss:" + k, JSON.stringify(v)); } catch {} },
@@ -17,6 +17,7 @@
     const root = document.documentElement;
     root.dataset.theme = settings.theme;
     root.style.setProperty("--ar-size", settings.size + "px");
+    document.body.classList.toggle("horizontal", settings.direction === "horizontal");
     document.querySelector('meta[name="theme-color"]').content =
       getComputedStyle(root).getPropertyValue("--bar").trim() || "#0f5c4d";
     store.set("settings", settings);
@@ -73,6 +74,31 @@
     main.innerHTML = html;
   }
 
+  const horizontal = () => settings.direction === "horizontal";
+  // Index of the page in view when reading sideways.
+  const pageIndex = () => Math.round(main.scrollLeft / (main.clientWidth || 1));
+  const goToPage = (i, behavior = "auto") => main.scrollTo({ left: i * main.clientWidth, behavior });
+
+  function syncPos() {
+    if (horizontal()) $("pagePos").textContent = `${pageIndex() + 1} / ${data.items.length}`;
+    $("toTop").hidden = horizontal() ? pageIndex() === 0 : window.scrollY < window.innerHeight;
+  }
+
+  // Re-render while keeping the reader on the same durood.
+  function rerender() {
+    const page = horizontal() ? pageIndex() : null;
+    render();
+    if (page !== null) goToPage(page);
+    syncPos();
+  }
+
+  function showCurrent() {
+    const i = data.items.findIndex((it) => it.id === current);
+    if (horizontal()) goToPage(Math.max(i, 0));
+    else main.querySelector(".card.current")?.scrollIntoView({ block: "center" });
+    syncPos();
+  }
+
   // Tap a card to mark it as the one being read; tap it again to clear.
   main.addEventListener("click", (e) => {
     const card = e.target.closest(".card[data-id]");
@@ -94,6 +120,7 @@
   $("openSettings").onclick = () => {
     menu.hidden = true;
     $("themeSel").value = settings.theme;
+    $("dirSel").value = settings.direction;
     $("sizeRange").value = settings.size;
     $("sizeVal").textContent = settings.size + "px";
     $("showTr").checked = settings.showTr;
@@ -102,14 +129,16 @@
     dlg.showModal();
   };
   dlg.addEventListener("input", () => {
+    const dirChanged = settings.direction !== $("dirSel").value;
     settings.theme = $("themeSel").value;
+    settings.direction = $("dirSel").value;
     settings.size = Number($("sizeRange").value);
     settings.showTr = $("showTr").checked;
     settings.showEn = $("showEn").checked;
     settings.showSrc = $("showSrc").checked;
     $("sizeVal").textContent = settings.size + "px";
     applySettings();
-    render();
+    if (dirChanged) { render(); showCurrent(); } else rerender();
   });
 
   // About dialog
@@ -118,11 +147,17 @@
 
   for (const d of [dlg, about]) d.addEventListener("click", (e) => { if (e.target === d) d.close(); });
 
-  // Scroll-to-top button, shown once the reader is past the first screen.
-  const toTop = $("toTop");
-  const syncToTop = () => { toTop.hidden = window.scrollY < window.innerHeight; };
-  window.addEventListener("scroll", syncToTop, { passive: true });
-  toTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  // Scroll-to-top button: back to the top, or to the first page when reading sideways.
+  window.addEventListener("scroll", () => data && syncPos(), { passive: true });
+  main.addEventListener("scroll", () => data && syncPos(), { passive: true });
+  $("toTop").onclick = () => horizontal() ? goToPage(0, "smooth") : window.scrollTo({ top: 0, behavior: "smooth" });
+
+  document.addEventListener("keydown", (e) => {
+    if (!data || !horizontal() || document.querySelector("dialog[open]")) return;
+    if (e.key === "ArrowRight") goToPage(Math.min(pageIndex() + 1, data.items.length - 1), "smooth");
+    if (e.key === "ArrowLeft") goToPage(Math.max(pageIndex() - 1, 0), "smooth");
+  });
+  window.addEventListener("resize", () => { if (data && horizontal()) rerender(); });
 
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", applySettings);
 
@@ -133,8 +168,7 @@
       data = j;
       render();
       renderAbout();
-      main.querySelector(".card.current")?.scrollIntoView({ block: "center" });
-      syncToTop();
+      showCurrent();
     })
     .catch(() => { main.innerHTML = `<p class="empty">Could not load data.</p>`; });
 
