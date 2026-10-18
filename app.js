@@ -70,7 +70,8 @@
       <p class="en">${esc(o.translation_en)}</p>
       <h3 class="section-head">Virtues of the collection</h3>
       <ul>${data.collection_benefits.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
-      <p class="note">${esc(data.verification_note)}</p>`;
+      <h3 class="section-head">Note</h3>
+      <p>Utmost care has been taken in compiling the text, transliteration and translation in this app. Should you find anything incorrect or not in order, kindly inform the developer so it can be corrected, in sha Allah. May Allah accept it from all of us.</p>`;
   }
 
   const horizontal = () => settings.direction === "horizontal";
