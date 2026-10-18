@@ -184,6 +184,12 @@ body.horizontal .page-pos {
 }
 body.horizontal .to-top svg { transform: rotate(90deg); }
 
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%); z-index: 20;
+  bottom: calc(80px + env(safe-area-inset-bottom));
+  background: var(--text); color: var(--bg); padding: 8px 16px; border-radius: 999px; font-size: 14px;
+}
+
 .about-body { max-height: 65vh; overflow-y: auto; font-size: 14px; }
 .about-body p { margin: 6px 0; }
 .about-body ul { padding-left: 18px; }

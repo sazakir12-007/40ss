@@ -6,7 +6,7 @@ An offline-first PWA for reading and reciting the 40 Salawat & Salaam, as compil
 - 25 salawat and 15 salaam, with Arabic, transliteration, English translation, source and virtues
 - Read vertically (scroll) or sideways (one durood per screen, swiping left to right like an Arabic book)
 - Full text of all 40 in sequence; tap a card to lightly highlight the one you are reciting (remembered between visits)
-- About & opening in a popup from the top menu
+- About popup and Share link in the top menu
 - Light, sepia, dark and system themes; adjustable Arabic font size; toggle transliteration, translation and sources
 - Works fully offline once installed (service worker, bundled Amiri font)
 

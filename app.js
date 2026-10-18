@@ -180,6 +180,26 @@
   const about = $("about");
   $("openAbout").onclick = () => { menu.hidden = true; about.showModal(); };
 
+  // Share: the native share sheet where available, otherwise copy the link.
+  function toast(msg) {
+    const t = $("toast");
+    t.textContent = msg;
+    t.hidden = false;
+    clearTimeout(toast.timer);
+    toast.timer = setTimeout(() => { t.hidden = true; }, 2500);
+  }
+  $("shareApp").onclick = async () => {
+    menu.hidden = true;
+    const url = location.origin + location.pathname;
+    const share = { title: "40 Salawat & Salaam", text: "Chahal Durood – 40 Salawat & Salaam to recite daily.", url };
+    if (navigator.share) {
+      try { await navigator.share(share); } catch {}
+      return;
+    }
+    try { await navigator.clipboard.writeText(url); toast("Link copied"); }
+    catch { prompt("Copy this link:", url); }
+  };
+
   for (const d of [dlg, about]) d.addEventListener("click", (e) => { if (e.target === d) d.close(); });
 
   // Scroll-to-top button: back to the top, or to the first page when reading sideways.
