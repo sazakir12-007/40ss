@@ -1,5 +1,5 @@
 // Bump VERSION whenever any cached file changes.
-const VERSION = "40ss-v16";
+const VERSION = "40ss-v17";
 const ASSETS = [
   "./",
   "index.html",
@@ -15,7 +15,9 @@ const ASSETS = [
   "fonts/noto-naskh-700.woff2",
   "fonts/lateef-400.woff2",
   "fonts/lateef-700.woff2",
-  "icons/icon.svg",
+  "icons/icon-maskable-512.png",
+  "icons/apple-touch-icon.png",
+  "icons/favicon-64.png",
   "icons/icon-192.png",
   "icons/icon-512.png",
 ];
