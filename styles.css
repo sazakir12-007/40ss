@@ -11,6 +11,43 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Scheherazade New";
+  src: url("fonts/scheherazade-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Scheherazade New";
+  src: url("fonts/scheherazade-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  src: url("fonts/noto-naskh-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  src: url("fonts/noto-naskh-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lateef";
+  src: url("fonts/lateef-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lateef";
+  src: url("fonts/lateef-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --bg: #f7f5ef;
   --surface: #ffffff;
@@ -24,6 +61,7 @@
   --highlight: #eef6f1;
   --on-accent: #fff;
   --ar-size: 30px;
+  --ar-font: "Amiri", "Traditional Arabic", serif;
   color-scheme: light;
 }
 :root[data-theme="sepia"] {
@@ -112,6 +150,27 @@
   --on-accent: #000000;
   color-scheme: dark;
 }
+/* Deep emerald with gold accents. */
+:root[data-theme="emerald"] {
+  --bg: #04291f;
+  --surface: #073a2c;
+  --text: #f3efe2;
+  --muted: #b5c7bb;
+  --accent: #e0bd5f;
+  --accent-soft: #0d4b39;
+  --border: #0f4a38;
+  --gold: #e0bd5f;
+  --bar: #022219;
+  --highlight: #0b4a37;
+  --on-accent: #04291f;
+  color-scheme: dark;
+}
+
+:root[data-ar-font="scheherazade"] { --ar-font: "Scheherazade New", serif; }
+:root[data-ar-font="noto-naskh"] { --ar-font: "Noto Naskh Arabic", serif; }
+:root[data-ar-font="lateef"] { --ar-font: "Lateef", serif; }
+:root[data-ar-font="system"] { --ar-font: "Traditional Arabic", "Geeza Pro", "Noto Naskh Arabic UI", serif; }
+
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"] {
     --bg: #0e1412;
@@ -178,10 +237,9 @@ main { max-width: 760px; margin: 0 auto; padding: 4px 16px 48px; }
   background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px;
 }
 .card.current .num { background: var(--accent); color: var(--on-accent); }
-.badge.pending { color: var(--gold); }
 
 .ar {
-  font-family: "Amiri", "Traditional Arabic", serif;
+  font-family: var(--ar-font);
   font-size: var(--ar-size); line-height: 2; direction: rtl; text-align: right;
   margin: 10px 0 6px;
 }
@@ -194,7 +252,7 @@ main { max-width: 760px; margin: 0 auto; padding: 4px 16px 48px; }
 
 .section-head { margin: 22px 0 4px; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
 .section-title { text-align: center; margin: 28px 0 14px; color: var(--accent); }
-.section-title .st-ar { font-family: "Amiri", "Traditional Arabic", serif; font-size: calc(var(--ar-size) + 18px); font-weight: 700; line-height: 1.6; }
+.section-title .st-ar { font-family: var(--ar-font); font-size: calc(var(--ar-size) + 18px); font-weight: 700; line-height: 1.6; }
 .section-title .st-en { font-size: 26px; font-weight: 700; letter-spacing: .04em; }
 .section-title .st-range { font-size: 13px; color: var(--muted); letter-spacing: .08em; margin-top: 2px; }
 .section-title::after { content: ""; display: block; width: 72px; height: 2px; margin: 12px auto 0; background: var(--gold); border-radius: 2px; }

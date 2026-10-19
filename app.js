@@ -1,5 +1,5 @@
 (() => {
-  const DEFAULTS = { theme: "auto", direction: "vertical", size: 30, showTr: true, showEn: true, showSrc: true };
+  const DEFAULTS = { theme: "auto", direction: "vertical", font: "amiri", size: 30, showTr: true, showEn: true, showSrc: true };
   const store = {
     get(k, d) { try { const v = localStorage.getItem("40ss:" + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
     set(k, v) { try { localStorage.setItem("40ss:" + k, JSON.stringify(v)); } catch {} },
@@ -17,6 +17,7 @@
     const root = document.documentElement;
     root.dataset.theme = settings.theme;
     root.style.setProperty("--ar-size", settings.size + "px");
+    root.dataset.arFont = settings.font;
     document.body.classList.toggle("horizontal", settings.direction === "horizontal");
     document.querySelector('meta[name="theme-color"]').content =
       getComputedStyle(root).getPropertyValue("--bar").trim() || "#0f5c4d";
@@ -37,7 +38,6 @@
   };
 
   function itemHtml(it, heading = "") {
-    const pending = it.source_status === "pending_verification";
     const src = settings.showSrc
       ? `<div class="src">
           ${it.source ? `<h3>Source</h3><div>${esc(it.source)}</div>` : `<h3>Source</h3><div>Reference pending verification.</div>`}
@@ -49,7 +49,6 @@
       ${heading}
       <div class="meta">
         <span class="num">${it.id}</span>
-        ${pending ? `<span class="badge pending" title="Source pending verification">Unverified source</span>` : ""}
       </div>
       <div class="ar" lang="ar">${esc(it.arabic)}</div>
       ${settings.showTr ? `<p class="tr">${esc(it.transliteration)}</p>` : ""}
@@ -169,6 +168,7 @@
     menu.hidden = true;
     $("themeSel").value = settings.theme;
     $("dirSel").value = settings.direction;
+    $("fontSel").value = settings.font;
     $("sizeRange").value = settings.size;
     $("sizeVal").textContent = settings.size + "px";
     $("showTr").checked = settings.showTr;
@@ -180,6 +180,7 @@
     const dirChanged = settings.direction !== $("dirSel").value;
     settings.theme = $("themeSel").value;
     settings.direction = $("dirSel").value;
+    settings.font = $("fontSel").value;
     settings.size = Number($("sizeRange").value);
     settings.showTr = $("showTr").checked;
     settings.showEn = $("showEn").checked;
@@ -204,7 +205,7 @@
   $("shareApp").onclick = async () => {
     menu.hidden = true;
     const url = location.origin + location.pathname;
-    const share = { title: "40 Salawat & Salaam", text: "Chahal Durood – 40 Salawat & Salaam to recite daily.", url };
+    const share = { title: "As-Salatu was-Salam", text: "As-Salatu was-Salam – 40 salawat and salaam upon the Prophet ﷺ to recite daily.", url };
     if (navigator.share) {
       try { await navigator.share(share); } catch {}
       return;

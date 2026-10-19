@@ -1,4 +1,4 @@
-# 40 Salawat & Salaam (Chahal Durood)
+# As-Salatu was-Salam
 
 An offline-first PWA for reading and reciting the 40 Salawat & Salaam, as compiled in *Zad-us-Sa'eed* and reproduced in *Fazail-e-Durood*.
 
@@ -7,8 +7,9 @@ An offline-first PWA for reading and reciting the 40 Salawat & Salaam, as compil
 - Read vertically (scroll) or sideways (one durood per screen, swiping left to right like an Arabic book)
 - Full text of all 40 in sequence; tap a card to lightly highlight the one you are reciting (remembered between visits)
 - About popup and Share link in the top menu
-- Themes: system, light, sepia, ocean, rose, lavender, dark, midnight and black (AMOLED); adjustable Arabic font size; toggle transliteration, translation and sources
-- Works fully offline once installed (service worker, bundled Amiri font)
+- Themes: system, light, sepia, ocean, rose, lavender, emerald, dark, midnight and black (AMOLED)
+- Arabic fonts: Amiri, Scheherazade New, Noto Naskh Arabic, Lateef or the device default; adjustable size; toggle transliteration, translation and sources
+- Works fully offline once installed (service worker, bundled Arabic fonts)
 
 ## Run locally
 Any static server works:
@@ -23,4 +24,7 @@ Then open http://localhost:8000 and use "Install app" / "Add to Home Screen".
 When you change any cached file, bump `VERSION` in `sw.js` so installed copies update.
 
 ## Credits
-Amiri font © The Amiri Project Authors, SIL Open Font License 1.1 (`fonts/OFL.txt`).
+Fonts are licensed under the SIL Open Font License 1.1:
+- Amiri © The Amiri Project Authors (`fonts/OFL.txt`)
+- Scheherazade New and Lateef © SIL Global (`fonts/OFL-scheherazade.txt`, `fonts/OFL-lateef.txt`)
+- Noto Naskh Arabic © The Noto Project Authors (`fonts/OFL-noto-naskh.txt`)
