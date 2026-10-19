@@ -1,5 +1,5 @@
 (() => {
-  const DEFAULTS = { theme: "auto", direction: "vertical", font: "amiri", size: 30, showTr: true, showEn: true, showSrc: true };
+  const DEFAULTS = { theme: "auto", direction: "vertical", font: "amiri", autoSec: 30, size: 30, showTr: true, showEn: true, showSrc: true };
   const store = {
     get(k, d) { try { const v = localStorage.getItem("40ss:" + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
     set(k, v) { try { localStorage.setItem("40ss:" + k, JSON.stringify(v)); } catch {} },
@@ -128,7 +128,14 @@
       const page = pageIndex(), n = data.items.length;
       $("pagePos").textContent = page === 0 ? "Opening" : page === n + 1 ? "Virtues" : page > n ? "Spiritual virtues" : `${page} / ${n}`;
     }
-    $("toTop").hidden = horizontal() ? pageIndex() === 0 : window.scrollY < window.innerHeight;
+    if (horizontal()) {
+      $("toTop").hidden = pageIndex() === 0;
+      $("toBottom").hidden = pageIndex() >= data.items.length + 2;
+    } else {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      $("toTop").hidden = window.scrollY < window.innerHeight;
+      $("toBottom").hidden = window.scrollY > max - window.innerHeight;
+    }
   }
 
   // Re-render while keeping the reader on the same durood.
@@ -146,16 +153,70 @@
     syncPos();
   }
 
+  function setCurrent(id) {
+    current = id;
+    store.set("current", current);
+    main.querySelectorAll(".card.current").forEach((c) => c.classList.remove("current"));
+    if (current) main.querySelector(`.card[data-id="${current}"]`)?.classList.add("current");
+  }
+
   // Tap a card to mark it as the one being read; tap it again to clear.
   main.addEventListener("click", (e) => {
     const card = e.target.closest(".card[data-id]");
     if (!card || getSelection().toString()) return;
     const id = Number(card.dataset.id);
-    current = current === id ? null : id;
-    store.set("current", current);
-    main.querySelectorAll(".card.current").forEach((c) => c.classList.remove("current"));
-    if (current) card.classList.add("current");
+    setCurrent(current === id ? null : id);
   });
+
+  // Auto scroll: highlight each durood in turn, moving on after the chosen time.
+  let autoTimer = null, wakeLock = null;
+  const autoOn = () => autoTimer !== null;
+
+  function firstVisibleIndex() {
+    if (horizontal()) return Math.min(Math.max(pageIndex() - 1, 0), data.items.length - 1);
+    const top = document.querySelector(".bar").getBoundingClientRect().bottom;
+    const cards = [...main.querySelectorAll(".card[data-id]")];
+    const i = cards.findIndex((c) => c.getBoundingClientRect().bottom > top + 40);
+    return i < 0 ? 0 : i;
+  }
+
+  function autoStep(i) {
+    if (i >= data.items.length) { stopAuto(); toast("Completed"); return; }
+    setCurrent(data.items[i].id);
+    if (horizontal()) goToPage(i + 1, "smooth");
+    else main.querySelector(`.card[data-id="${current}"]`)?.scrollIntoView({ block: "start", behavior: "smooth" });
+    const bar = $("autoBar");
+    bar.style.animation = "none";
+    void bar.offsetWidth;
+    bar.style.animation = `auto-progress ${settings.autoSec}s linear forwards`;
+    autoTimer = setTimeout(() => autoStep(i + 1), settings.autoSec * 1000);
+  }
+
+  async function keepAwake() {
+    try { if (autoOn() && navigator.wakeLock && document.visibilityState === "visible") wakeLock = await navigator.wakeLock.request("screen"); } catch {}
+  }
+
+  function startAuto() {
+    const i = current ? data.items.findIndex((it) => it.id === current) : firstVisibleIndex();
+    document.body.classList.add("auto");
+    $("autoBtn").setAttribute("aria-label", "Stop auto scroll");
+    autoTimer = 0;
+    autoStep(Math.max(i, 0));
+    keepAwake();
+  }
+
+  function stopAuto() {
+    clearTimeout(autoTimer);
+    autoTimer = null;
+    document.body.classList.remove("auto");
+    $("autoBtn").setAttribute("aria-label", "Start auto scroll");
+    $("autoBar").style.animation = "none";
+    wakeLock?.release().catch(() => {});
+    wakeLock = null;
+  }
+
+  $("autoBtn").onclick = () => { if (data) autoOn() ? stopAuto() : startAuto(); };
+  document.addEventListener("visibilitychange", keepAwake);
 
   // Menu
   const menu = $("menu");
@@ -168,7 +229,8 @@
     menu.hidden = true;
     $("themeSel").value = settings.theme;
     $("dirSel").value = settings.direction;
-    $("fontSel").value = settings.font;
+    dlg.querySelector(`input[name="font"][value="${settings.font}"]`).checked = true;
+    $("autoSel").value = String(settings.autoSec);
     $("sizeRange").value = settings.size;
     $("sizeVal").textContent = settings.size + "px";
     $("showTr").checked = settings.showTr;
@@ -180,7 +242,8 @@
     const dirChanged = settings.direction !== $("dirSel").value;
     settings.theme = $("themeSel").value;
     settings.direction = $("dirSel").value;
-    settings.font = $("fontSel").value;
+    settings.font = dlg.querySelector('input[name="font"]:checked')?.value || settings.font;
+    settings.autoSec = Number($("autoSel").value);
     settings.size = Number($("sizeRange").value);
     settings.showTr = $("showTr").checked;
     settings.showEn = $("showEn").checked;
@@ -220,6 +283,9 @@
   window.addEventListener("scroll", () => data && syncPos(), { passive: true });
   main.addEventListener("scroll", () => data && syncPos(), { passive: true });
   $("toTop").onclick = () => horizontal() ? goToPage(0, "smooth") : window.scrollTo({ top: 0, behavior: "smooth" });
+  $("toBottom").onclick = () => horizontal()
+    ? goToPage(data.items.length + 2, "smooth")
+    : window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
 
   document.addEventListener("keydown", (e) => {
     if (!data || !horizontal() || document.querySelector("dialog[open]")) return;

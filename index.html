@@ -16,7 +16,7 @@
     <h1>As-Salatu was-Salam</h1>
     <div class="menu-wrap">
       <button class="icon-btn" id="menuBtn" aria-label="Menu" aria-haspopup="menu">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
       </button>
       <div class="menu" id="menu" role="menu" hidden>
         <button role="menuitem" id="openSettings">Settings</button>
@@ -24,6 +24,7 @@
         <button role="menuitem" id="shareApp">Share app</button>
       </div>
     </div>
+    <div class="auto-bar" id="autoBar"></div>
   </header>
 
   <main id="main"></main>
@@ -31,14 +32,23 @@
   <div class="page-pos" id="pagePos"></div>
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <button class="to-top" id="toTop" aria-label="Scroll to top" hidden>
-    <svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
+  <button class="fab play" id="autoBtn" aria-label="Start auto scroll">
+    <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg>
+    <svg class="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>
   </button>
+  <div class="fab-stack">
+    <button class="fab" id="toTop" aria-label="Scroll to top" hidden>
+      <svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
+    </button>
+    <button class="fab" id="toBottom" aria-label="Scroll to bottom" hidden>
+      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  </div>
 
   <dialog id="settings">
     <form method="dialog">
       <h2>Settings</h2>
-      <p class="hint">Tap any durood to mark it while you recite; the app remembers your place.</p>
+      <p class="hint">Tap any durood to mark it while you recite; the app remembers your place. Use ▶ to move through them automatically.</p>
       <label>Theme
         <select id="themeSel">
           <option value="auto">System</option>
@@ -59,17 +69,28 @@
           <option value="horizontal">Sideways (swipe left → right)</option>
         </select>
       </label>
-      <label>Arabic font
-        <select id="fontSel">
-          <option value="amiri">Amiri</option>
-          <option value="scheherazade">Scheherazade</option>
-          <option value="noto-naskh">Noto Naskh</option>
-          <option value="lateef">Lateef</option>
-          <option value="system">Device default</option>
-        </select>
-      </label>
+      <fieldset class="fonts">
+        <legend>Arabic font</legend>
+        <label class="font-opt"><input type="radio" name="font" value="amiri"><span class="sample" style="font-family: Amiri">صَلِّ عَلَى مُحَمَّدٍ</span><span class="fname">Amiri</span></label>
+        <label class="font-opt"><input type="radio" name="font" value="scheherazade"><span class="sample" style="font-family: 'Scheherazade New'">صَلِّ عَلَى مُحَمَّدٍ</span><span class="fname">Scheherazade</span></label>
+        <label class="font-opt"><input type="radio" name="font" value="noto-naskh"><span class="sample" style="font-family: 'Noto Naskh Arabic'">صَلِّ عَلَى مُحَمَّدٍ</span><span class="fname">Noto Naskh</span></label>
+        <label class="font-opt"><input type="radio" name="font" value="lateef"><span class="sample" style="font-family: Lateef">صَلِّ عَلَى مُحَمَّدٍ</span><span class="fname">Lateef</span></label>
+        <label class="font-opt"><input type="radio" name="font" value="system"><span class="sample" style="font-family: 'Traditional Arabic', 'Geeza Pro', serif">صَلِّ عَلَى مُحَمَّدٍ</span><span class="fname">Device default</span></label>
+      </fieldset>
       <label>Arabic size <span id="sizeVal"></span>
         <input type="range" id="sizeRange" min="20" max="48" step="2">
+      </label>
+      <label>Auto scroll – time per durood
+        <select id="autoSel">
+          <option value="10">10 seconds</option>
+          <option value="15">15 seconds</option>
+          <option value="20">20 seconds</option>
+          <option value="30">30 seconds</option>
+          <option value="45">45 seconds</option>
+          <option value="60">1 minute</option>
+          <option value="90">1½ minutes</option>
+          <option value="120">2 minutes</option>
+        </select>
       </label>
       <label class="check"><input type="checkbox" id="showTr"> Show transliteration</label>
       <label class="check"><input type="checkbox" id="showEn"> Show translation</label>
