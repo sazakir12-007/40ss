@@ -236,6 +236,7 @@
     $("showTr").checked = settings.showTr;
     $("showEn").checked = settings.showEn;
     $("showSrc").checked = settings.showSrc;
+    showOfflineStatus();
     dlg.showModal();
   };
   dlg.addEventListener("input", () => {
@@ -307,13 +308,20 @@
     })
     .catch(() => { main.innerHTML = `<p class="empty">Could not load data.</p>`; });
 
+  // Offline support: register straight away so the app is saved on the first visit.
+  async function offlineReady() {
+    try { return !!(await caches.match("./")) && !!(await caches.match("data/40_durood.json")); } catch { return false; }
+  }
+  async function showOfflineStatus() {
+    $("offlineStatus").textContent = (await offlineReady())
+      ? "✓ Saved on this device – works without internet"
+      : "Not saved for offline use yet – keep the app open with internet on for a moment";
+  }
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      const firstInstall = !navigator.serviceWorker.controller;
-      navigator.serviceWorker.register("sw.js").catch(() => {});
-      navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (firstInstall) toast("Ready to use offline");
-      });
+    const firstInstall = !navigator.serviceWorker.controller;
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (firstInstall) toast("Ready to use offline");
     });
   }
 })();
