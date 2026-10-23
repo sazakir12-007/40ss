@@ -1,4 +1,4 @@
-# As-Salatu was-Salam
+# 40 Darood wa Salam
 
 An offline-first PWA for reading and reciting the 40 Salawat & Salaam, as compiled in *Zad-us-Sa'eed* and reproduced in *Fazail-e-Durood*.
 

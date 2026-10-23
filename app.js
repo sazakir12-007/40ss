@@ -268,7 +268,7 @@
   $("shareApp").onclick = async () => {
     menu.hidden = true;
     const url = location.origin + location.pathname;
-    const share = { title: "As-Salatu was-Salam", text: "As-Salatu was-Salam – 40 salawat and salaam upon the Prophet ﷺ to recite daily.", url };
+    const share = { title: "40 Darood wa Salam", text: "40 Darood wa Salam – 40 salawat and salaam upon the Prophet ﷺ to recite daily.", url };
     if (navigator.share) {
       try { await navigator.share(share); } catch {}
       return;
@@ -308,6 +308,12 @@
     .catch(() => { main.innerHTML = `<p class="empty">Could not load data.</p>`; });
 
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    window.addEventListener("load", () => {
+      const firstInstall = !navigator.serviceWorker.controller;
+      navigator.serviceWorker.register("sw.js").catch(() => {});
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (firstInstall) toast("Ready to use offline");
+      });
+    });
   }
 })();

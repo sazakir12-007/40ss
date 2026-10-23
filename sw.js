@@ -1,5 +1,5 @@
 // Bump VERSION whenever any cached file changes.
-const VERSION = "40ss-v18";
+const VERSION = "40ss-v19";
 const ASSETS = [
   "./",
   "index.html",
@@ -38,6 +38,9 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
   e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then((hit) => hit || fetch(e.request))
+    caches.match(e.request, { ignoreSearch: true }).then((hit) => hit || fetch(e.request).catch(() => {
+      if (e.request.mode === "navigate") return caches.match("index.html");
+      throw new Error("offline");
+    }))
   );
 });
