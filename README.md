@@ -31,6 +31,9 @@ The same app is also packaged as a WordPress plugin, without changing the standa
 - Install via Plugins → Add New → Upload Plugin, then add `[darood_wa_salam]` to any page (optional `height="700px"`).
 - Source: `wordpress/`; rebuild the repo copy with `scripts/build-wordpress.sh wordpress/darood-wa-salam.zip` after changing the app.
 
+### Full text for WordPress.com (no plugin)
+For sites that cannot install plugins (e.g. the WordPress.com free plan), [`wordpress/page-content.html`](wordpress/page-content.html) holds the full text as block-editor content. In a page, open ⋮ → **Code editor**, paste the file's contents, then switch back to the visual editor. Rebuild it after changing the data with `scripts/build-wp-page.py`.
+
 ## Credits
 Fonts are licensed under the SIL Open Font License 1.1:
 - Amiri © The Amiri Project Authors (`fonts/OFL.txt`)
