@@ -39,7 +39,7 @@ def text(s):
 GREEN, GOLD, BLUE, BROWN, ROSE, INK = "#0f5c4d", "#b8892b", "#1d5f8a", "#7a4f1d", "#9a3b47", "#2f3b36"
 
 
-def heading(s, level=2, center=True, color=GREEN):
+def heading(s, level=3, center=True, color=GREEN, bold=False):
     attrs = {"textAlign": "center"} if center else {}
     if level != 2:
         attrs["level"] = level
@@ -47,7 +47,7 @@ def heading(s, level=2, center=True, color=GREEN):
     cls = "wp-block-heading has-text-align-center has-text-color" if center else "wp-block-heading has-text-color"
     blocks.append(
         f"<!-- wp:heading {json.dumps(attrs)} -->\n"
-        f'<h{level} class="{cls}" style="color:{color}">{text(s)}</h{level}>\n<!-- /wp:heading -->'
+        f'<h{level} class="{cls}" style="color:{color}">{f"<strong>{text(s)}</strong>" if bold else text(s)}</h{level}>\n<!-- /wp:heading -->'
     )
 
 
@@ -110,7 +110,7 @@ app_button("Open the app ↗")
 
 # Opening
 o = data["opening"]
-heading("Salutations Upon the Messenger Muhammad Sallallahu Alayhi Wa Sallam from Ahaadeeth")
+heading("Salutations Upon the Messenger Muhammad Sallallahu Alayhi Wa Sallam from Ahaadeeth", bold=True)
 arabic(o["arabic"], align="center")
 para(f"<em>{text(o['transliteration'])}</em>", align="center", color=BLUE)
 para(text(o["translation_en"]), align="center")
