@@ -35,16 +35,23 @@ def text(s):
     return escape(s, quote=False).replace("\n", "<br>")
 
 
-def heading(s, level=2, center=True):
+# Colours (fixed so they look the same in any theme).
+GREEN, GOLD, BLUE, BROWN, ROSE, INK = "#0f5c4d", "#b8892b", "#1d5f8a", "#7a4f1d", "#9a3b47", "#2f3b36"
+
+
+def heading(s, level=2, center=True, color=GREEN):
     attrs = {"textAlign": "center"} if center else {}
     if level != 2:
         attrs["level"] = level
-    cls = "wp-block-heading has-text-align-center" if center else "wp-block-heading"
-    head = f"<!-- wp:heading {json.dumps(attrs)} -->" if attrs else "<!-- wp:heading -->"
-    blocks.append(f'{head}\n<h{level} class="{cls}">{text(s)}</h{level}>\n<!-- /wp:heading -->')
+    attrs["style"] = {"color": {"text": color}}
+    cls = "wp-block-heading has-text-align-center has-text-color" if center else "wp-block-heading has-text-color"
+    blocks.append(
+        f"<!-- wp:heading {json.dumps(attrs)} -->\n"
+        f'<h{level} class="{cls}" style="color:{color}">{text(s)}</h{level}>\n<!-- /wp:heading -->'
+    )
 
 
-def para(html, align=None, size=None, rtl=False):
+def para(html, align=None, size=None, rtl=False, color=INK):
     attrs, classes = {}, []
     if align:
         attrs["align"] = align
@@ -54,32 +61,58 @@ def para(html, align=None, size=None, rtl=False):
     if size:
         attrs["fontSize"] = size
         classes.append(f"has-{size}-font-size")
-    cls = f' class="{" ".join(classes)}"' if classes else ""
+    attrs["style"] = {"color": {"text": color}}
+    classes.append("has-text-color")
     dir_attr = ' dir="rtl"' if rtl else ""
-    head = f"<!-- wp:paragraph {json.dumps(attrs)} -->" if attrs else "<!-- wp:paragraph -->"
-    blocks.append(f"{head}\n<p{cls}{dir_attr}>{html}</p>\n<!-- /wp:paragraph -->")
+    blocks.append(
+        f"<!-- wp:paragraph {json.dumps(attrs)} -->\n"
+        f'<p class="{" ".join(classes)}" style="color:{color}"{dir_attr}>{html}</p>\n<!-- /wp:paragraph -->'
+    )
 
 
-def arabic(s, size="x-large", align="right"):
-    para(text(s), align=align, size=size, rtl=True)
+def arabic(s, size="x-large", align="right", color=GREEN):
+    para(text(s), align=align, size=size, rtl=True, color=color)
 
 
-def items_list(entries, ordered=False):
+def items_list(entries, ordered=False, color=INK):
     tag = "ol" if ordered else "ul"
-    head = '<!-- wp:list {"ordered":true} -->' if ordered else "<!-- wp:list -->"
+    attrs = {"ordered": True} if ordered else {}
+    attrs["style"] = {"color": {"text": color}}
     lis = "\n".join(f"<!-- wp:list-item -->\n<li>{e}</li>\n<!-- /wp:list-item -->" for e in entries)
-    blocks.append(f'{head}\n<{tag} class="wp-block-list">{lis}</{tag}>\n<!-- /wp:list -->')
+    blocks.append(
+        f"<!-- wp:list {json.dumps(attrs)} -->\n"
+        f'<{tag} class="wp-block-list has-text-color" style="color:{color}">{lis}</{tag}>\n<!-- /wp:list -->'
+    )
 
 
-def separator():
-    blocks.append('<!-- wp:separator -->\n<hr class="wp-block-separator has-alpha-channel-opacity"/>\n<!-- /wp:separator -->')
+def separator(color=GOLD):
+    attrs = {"style": {"color": {"background": color}}}
+    blocks.append(
+        f"<!-- wp:separator {json.dumps(attrs)} -->\n"
+        f'<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background" style="background-color:{color};color:{color}"/>\n'
+        f"<!-- /wp:separator -->"
+    )
 
+
+def app_button(label, color=GREEN):
+    """A rounded, coloured button at the top right linking to the full app."""
+    btn = {"style": {"color": {"background": color, "text": "#ffffff"}, "border": {"radius": "999px"}}}
+    blocks.append(
+        '<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->\n<div class="wp-block-buttons">'
+        f"<!-- wp:button {json.dumps(btn)} -->\n"
+        f'<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="{APP_URL}" '
+        f'style="border-radius:999px;color:#ffffff;background-color:{color}">{label}</a></div>\n'
+        "<!-- /wp:button --></div>\n<!-- /wp:buttons -->"
+    )
+
+
+app_button("Open the app ↗")
 
 # Opening
 o = data["opening"]
 heading("Salutations Upon the Messenger Muhammad Sallallahu Alayhi Wa Sallam from Ahaadeeth")
 arabic(o["arabic"], align="center")
-para(f"<em>{text(o['transliteration'])}</em>", align="center")
+para(f"<em>{text(o['transliteration'])}</em>", align="center", color=BLUE)
 para(text(o["translation_en"]), align="center")
 
 SECTIONS = {
@@ -93,26 +126,26 @@ for it in data["items"]:
         last = it["type"]
         separator()
         ar, en = SECTIONS[last]
-        arabic(ar, size="xx-large", align="center")
+        arabic(ar, size="xx-large", align="center", color=GOLD)
         heading(en)
     else:
         separator()
-    heading(str(it["id"]), level=3)
+    heading(str(it["id"]), level=3, color=GOLD)
     arabic(it["arabic"])
-    para(f"<em>{text(it['transliteration'])}</em>")
+    para(f"<em>{text(it['transliteration'])}</em>", color=BLUE)
     para(text(it["translation_en"]))
     if it["source"]:
-        para(f"<strong>Source:</strong> {text(it['source'])}", size="small")
+        para(f"<strong>Source:</strong> {text(it['source'])}", size="small", color=BROWN)
     for b in it["benefits"]:
-        para(f"<strong>Virtue:</strong> {text(b)}", size="small")
+        para(f"<strong>Virtue:</strong> {text(b)}", size="small", color=ROSE)
 
 # Virtues
 v = data["virtues_verse"]
 separator()
 heading("Virtues")
 arabic(v["arabic"], align="center")
-para(text(v["translation_en"]), align="center")
-para(f"<em>{text(v['reference'])}</em>", align="center", size="small")
+para(text(v["translation_en"]), align="center", color=BLUE)
+para(f"<em>{text(v['reference'])}</em>", align="center", size="small", color=GOLD)
 items_list([text(b) for b in data["collection_benefits"]])
 
 # About
@@ -120,8 +153,8 @@ separator()
 heading("About")
 for p in ABOUT:
     para(p)
-heading("Note", level=3, center=False)
-para(text(NOTE))
+heading("Note", level=3, center=False, color=GOLD)
+para(text(NOTE), color=BROWN)
 
 # Spiritual virtues
 s = data["spiritual_virtues"]
@@ -130,10 +163,10 @@ heading(s["title"])
 for p in s["intro"]:
     para(text(p))
 for i, pt in enumerate(s["points"], 1):
-    heading(f"{i}. {pt['title']}", level=3, center=False)
+    heading(f"{i}. {pt['title']}", level=3, center=False, color=BLUE)
     para(text(pt["text"]))
     if pt.get("bullets"):
-        items_list([text(b) for b in pt["bullets"]])
+        items_list([text(b) for b in pt["bullets"]], color=GREEN)
 
 # Link to the full app
 separator()
