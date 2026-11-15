@@ -70,7 +70,7 @@ def para(html, align=None, size=None, rtl=False, color=INK):
     )
 
 
-def arabic(s, size="x-large", align="right", color=GREEN):
+def arabic(s, size="large", align="right", color=GREEN):
     para(text(s), align=align, size=size, rtl=True, color=color)
 
 
@@ -126,7 +126,7 @@ for it in data["items"]:
         last = it["type"]
         separator()
         ar, en = SECTIONS[last]
-        arabic(ar, size="xx-large", align="center", color=GOLD)
+        arabic(ar, align="center", color=GOLD)
         heading(en)
     else:
         separator()
