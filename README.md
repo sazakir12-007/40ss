@@ -27,9 +27,9 @@ When you change any cached file, bump `VERSION` in `sw.js` so installed copies u
 
 ## WordPress plugin
 The same app is also packaged as a WordPress plugin, without changing the standalone app.
-- Download: https://sazakir12-007.github.io/40ss/darood-wa-salam.zip (rebuilt on every push to `main`)
+- Download: [`wordpress/darood-wa-salam.zip`](wordpress/darood-wa-salam.zip) in this repo, or https://sazakir12-007.github.io/40ss/darood-wa-salam.zip (rebuilt on every push to `main`)
 - Install via Plugins → Add New → Upload Plugin, then add `[darood_wa_salam]` to any page (optional `height="700px"`).
-- Source: `wordpress/`; build locally with `scripts/build-wordpress.sh`.
+- Source: `wordpress/`; rebuild the repo copy with `scripts/build-wordpress.sh wordpress/darood-wa-salam.zip` after changing the app.
 
 ## Credits
 Fonts are licensed under the SIL Open Font License 1.1:

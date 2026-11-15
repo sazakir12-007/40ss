@@ -1,5 +1,5 @@
 // Bump VERSION whenever any cached file changes.
-const VERSION = "40ss-v21";
+const VERSION = "40ss-v22";
 
 // Needed to open the app at all; install fails if any of these cannot be fetched.
 const CORE = [
@@ -66,7 +66,16 @@ async function asset(req) {
   return res;
 }
 
+// Only the app's own page gets the app shell; other links (like the plugin zip) go to the network.
+const isAppPage = (url) => url.pathname === new URL("./", self.location).pathname || url.pathname.endsWith("/index.html");
+
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
-  e.respondWith(e.request.mode === "navigate" ? navigate(e.request) : asset(e.request));
+  const url = new URL(e.request.url);
+  if (e.request.mode === "navigate") {
+    if (isAppPage(url)) e.respondWith(navigate(e.request));
+    return;
+  }
+  if (url.pathname.endsWith(".zip")) return;
+  e.respondWith(asset(e.request));
 });
