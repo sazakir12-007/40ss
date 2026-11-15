@@ -10,6 +10,8 @@
   let data = null;
 
   const $ = (id) => document.getElementById(id);
+  // True when shown inside another page, e.g. the WordPress plugin's frame.
+  const embedded = window.self !== window.top;
   const main = $("main");
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -236,7 +238,7 @@
     $("showTr").checked = settings.showTr;
     $("showEn").checked = settings.showEn;
     $("showSrc").checked = settings.showSrc;
-    showOfflineStatus();
+    if (!embedded) showOfflineStatus();
     dlg.showModal();
   };
   dlg.addEventListener("input", () => {
@@ -268,7 +270,8 @@
   }
   $("shareApp").onclick = async () => {
     menu.hidden = true;
-    const url = location.origin + location.pathname;
+    // Inside the WordPress plugin's frame, share the page that embeds the app.
+    const url = embedded && document.referrer ? document.referrer : location.origin + location.pathname;
     const share = { title: "40 Darood wa Salam", text: "40 Darood wa Salam – 40 salawat and salaam upon the Prophet ﷺ to recite daily.", url };
     if (navigator.share) {
       try { await navigator.share(share); } catch {}
@@ -317,7 +320,8 @@
       ? "✓ Saved on this device – works without internet"
       : "Not saved for offline use yet – keep the app open with internet on for a moment";
   }
-  if ("serviceWorker" in navigator) {
+  // Offline use belongs to the standalone app, not to a page that embeds it.
+  if ("serviceWorker" in navigator && !embedded) {
     const firstInstall = !navigator.serviceWorker.controller;
     navigator.serviceWorker.register("sw.js").catch(() => {});
     navigator.serviceWorker.addEventListener("controllerchange", () => {

@@ -25,6 +25,8 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Build WordPress plugin zip
+        run: scripts/build-wordpress.sh darood-wa-salam.zip
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

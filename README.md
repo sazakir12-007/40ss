@@ -25,6 +25,12 @@ Then open http://localhost:8000 and use "Install app" / "Add to Home Screen".
 
 When you change any cached file, bump `VERSION` in `sw.js` so installed copies update.
 
+## WordPress plugin
+The same app is also packaged as a WordPress plugin, without changing the standalone app.
+- Download: https://sazakir12-007.github.io/40ss/darood-wa-salam.zip (rebuilt on every push to `main`)
+- Install via Plugins → Add New → Upload Plugin, then add `[darood_wa_salam]` to any page (optional `height="700px"`).
+- Source: `wordpress/`; build locally with `scripts/build-wordpress.sh`.
+
 ## Credits
 Fonts are licensed under the SIL Open Font License 1.1:
 - Amiri © The Amiri Project Authors (`fonts/OFL.txt`)

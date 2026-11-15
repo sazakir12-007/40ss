@@ -1,5 +1,5 @@
 // Bump VERSION whenever any cached file changes.
-const VERSION = "40ss-v20";
+const VERSION = "40ss-v21";
 
 // Needed to open the app at all; install fails if any of these cannot be fetched.
 const CORE = [
