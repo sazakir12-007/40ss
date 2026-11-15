@@ -4,6 +4,20 @@
 Usage: scripts/build-wp-page.py [output.html]   (default: wordpress/page-content.html)
 Paste the output into a page via ⋮ → Code editor.
 """
+APP_URL = "https://sazakir12-007.github.io/40ss/"
+
+ABOUT = [
+    "Maulana Ashraf Ali Thanvi (Rahmathulaahi Alayhi) originally compiled the 40 Durood and Salaam from Marfu' (directly attributed) Ahadith. "
+    "He published them in his book titled <em>Zadus Saeed</em> (and also referenced them in <em>Nashrut-Teeb</em>).",
+    "Shaykh al-Hadith Maulana Muhammad Zakariyya Kandhlawi (Rahmathulaahi Alayhi) famously popularized and re-narrated this exact compilation. "
+    "He included it at the end of his widely read book <em>Faza'il-e-Durood Shareef</em> (Virtues of Durood) to share the blessings of the compilation with a wider audience.",
+    "The collection consists of 25 forms of Durood (salutations of peace) and 15 forms of Salam (greetings of peace) extracted directly from prophetic traditions.",
+]
+NOTE = (
+    "Utmost care has been taken in compiling the text, transliteration and translation on this page. "
+    "Should you find anything incorrect or not in order, kindly inform the developer so it can be corrected, in sha Allah. "
+    "May Allah accept it from all of us."
+)
 import json
 import sys
 from html import escape
@@ -81,6 +95,8 @@ for it in data["items"]:
         ar, en = SECTIONS[last]
         arabic(ar, size="xx-large", align="center")
         heading(en)
+    else:
+        separator()
     heading(str(it["id"]), level=3)
     arabic(it["arabic"])
     para(f"<em>{text(it['transliteration'])}</em>")
@@ -99,6 +115,14 @@ para(text(v["translation_en"]), align="center")
 para(f"<em>{text(v['reference'])}</em>", align="center", size="small")
 items_list([text(b) for b in data["collection_benefits"]])
 
+# About
+separator()
+heading("About")
+for p in ABOUT:
+    para(p)
+heading("Note", level=3, center=False)
+para(text(NOTE))
+
 # Spiritual virtues
 s = data["spiritual_virtues"]
 separator()
@@ -110,6 +134,20 @@ for i, pt in enumerate(s["points"], 1):
     para(text(pt["text"]))
     if pt.get("bullets"):
         items_list([text(b) for b in pt["bullets"]])
+
+# Link to the full app
+separator()
+para(f'Read it in the full app (themes, Arabic fonts, auto scroll, works offline): <a href="{APP_URL}">{APP_URL}</a>', align="center")
+
+# Everything sits in one centred column: full width on small screens, at most 800px wide, padded on all sides.
+PAD = "1.5rem"
+group = {
+    "style": {"spacing": {"padding": {"top": PAD, "right": PAD, "bottom": PAD, "left": PAD}}},
+    "layout": {"type": "constrained", "contentSize": "800px"},
+}
+blocks.insert(0, f"<!-- wp:group {json.dumps(group)} -->\n"
+                 f'<div class="wp-block-group" style="padding-top:{PAD};padding-right:{PAD};padding-bottom:{PAD};padding-left:{PAD}">')
+blocks.append("</div>\n<!-- /wp:group -->")
 
 out.write_text("\n\n".join(blocks) + "\n", encoding="utf-8")
 print(f"Wrote {out} ({len(blocks)} blocks)")
